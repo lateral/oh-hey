@@ -1,0 +1,26 @@
+development: &default
+  adapter: postgresql
+  database: oh_hey
+  username: Max
+  password:
+  encoding: utf8
+  min_messages: warning
+  pool: 8
+  timeout: 5000
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: oh_hey_test
+  username: Max
+  password:
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  host: oh-hey.csl9jfmqsdni.eu-west-1.rds.amazonaws.com
+  database: oh_hey
+  username: oh_hey
+  password: <%= ENV['DB_PW'] %>
