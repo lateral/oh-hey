@@ -1,0 +1,116 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=50&include_rts=1&screen_name=maxnovakovic&since_id=558193998570217473&trim_user=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.13.0
+      Authorization:
+      - Bearer AAAAAAAAAAAAAAAAAAAAAO2MdgAAAAAAMTwnySuVXznDsBrCm7C6EgT3Qjc%3D5OoJbqCB5syKNEcBs5ma7AMTFQHziVAl3PlIz8r53Cbq27p7QX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Length:
+      - '533'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 23 Jan 2015 23:35:10 UTC
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Fri, 23 Jan 2015 23:35:10 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A142205611049517983; Domain=.twitter.com; Path=/; Expires=Sun,
+        22-Jan-2017 23:35:10 UTC
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read
+      X-Connection-Hash:
+      - 56e5c4868fd4eb2ea9d4016694b37e34
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '272'
+      X-Rate-Limit-Reset:
+      - '1422056159'
+      X-Response-Time:
+      - '100'
+      X-Transaction:
+      - 3ce07264278da791
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"Fri Jan 23 23:34:17 +0000 2015","id":558769720090841090,"id_str":"558769720090841090","text":"Are
+        we becoming too reliant on computers? http:\/\/t.co\/qpzubgZHDn","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"http:\/\/t.co\/qpzubgZHDn","expanded_url":"http:\/\/www.theguardian.com\/books\/2015\/jan\/17\/nicholas-carr-are-we-becoming-too-reliant-on-computers","display_url":"theguardian.com\/books\/2015\/jan\u2026","indices":[42,64]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"}]'
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:35:10 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://www.theguardian.com/books/2015/jan/17/nicholas-carr-are-we-becoming-too-reliant-on-computers
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:35:10 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:35:10 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:35:11 GMT
+recorded_with: VCR 2.9.3

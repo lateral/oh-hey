@@ -5,9 +5,18 @@ gem 'pg'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
+gem 'awesome_print'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'parallel'
 gem 'jbuilder'
+gem 'lateral_recommender', github: 'lateral/recommender-gem'
+gem 'twitter'
+gem 'resque'
+gem 'resque-loner'
+gem 'resque-scheduler'
+
+gem 'rspec-rails', groups: [:development, :test]
 
 group :development, :test do
   gem 'web-console'

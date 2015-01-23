@@ -1,0 +1,6 @@
+update_twitter:
+  cron: "*/10 * * * *"
+  class: TwitterUserUpdateAll
+  args:
+  queue: twitter
+  description: Queues all twitter accounts for update

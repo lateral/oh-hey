@@ -1,0 +1,1621 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.twitter.com/1.1/statuses/user_timeline.json?count=50&include_rts=1&screen_name=maxnovakovic&trim_user=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - TwitterRubyGem/5.13.0
+      Authorization:
+      - Bearer AAAAAAAAAAAAAAAAAAAAAO2MdgAAAAAAMTwnySuVXznDsBrCm7C6EgT3Qjc%3D5OoJbqCB5syKNEcBs5ma7AMTFQHziVAl3PlIz8r53Cbq27p7QX
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      Content-Length:
+      - '7839'
+      Content-Type:
+      - application/json;charset=utf-8
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 UTC
+      Expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      Last-Modified:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - tsa_b
+      Set-Cookie:
+      - guest_id=v1%3A142205593632279200; Domain=.twitter.com; Path=/; Expires=Sun,
+        22-Jan-2017 23:32:16 UTC
+      Status:
+      - 200 OK
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Access-Level:
+      - read
+      X-Connection-Hash:
+      - cf0310fdcf7d73f34ae76a8aaf880ced
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Rate-Limit-Limit:
+      - '300'
+      X-Rate-Limit-Remaining:
+      - '274'
+      X-Rate-Limit-Reset:
+      - '1422056159'
+      X-Response-Time:
+      - '137'
+      X-Transaction:
+      - 1197db427146535a
+      X-Twitter-Response-Tags:
+      - BouncerCompliant
+      X-Xss-Protection:
+      - 1; mode=block
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"Thu Jan 22 09:26:34 +0000 2015","id":558193998570217473,"id_str":"558193998570217473","text":"Real
+        life ad blocker http:\/\/t.co\/2aGQcyHEqt","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":1,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"http:\/\/t.co\/2aGQcyHEqt","expanded_url":"http:\/\/jonathandub.in\/cognizance\/","display_url":"jonathandub.in\/cognizance\/","indices":[21,43]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Sat
+        Jan 17 19:27:04 +0000 2015","id":556533179734294528,"id_str":"556533179734294528","text":"These
+        3D printed spinning sculptures are fantastic, hypnotic http:\/\/t.co\/th9TD4AL3K","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":1,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"http:\/\/t.co\/th9TD4AL3K","expanded_url":"http:\/\/vimeo.com\/116582567","display_url":"vimeo.com\/116582567","indices":[61,83]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Thu
+        Jan 15 13:01:15 +0000 2015","id":555711308809900032,"id_str":"555711308809900032","text":"The
+        DHS Agent Who Infiltrated Silk Road to Take Down Its Kingpin http:\/\/t.co\/xJgA7VoJvT","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"http:\/\/t.co\/xJgA7VoJvT","expanded_url":"http:\/\/www.forbes.com\/sites\/sarahjeong\/2015\/01\/14\/the-dhs-agent-who-infiltrated-silk-road-to-take-down-its-kingpin\/","display_url":"forbes.com\/sites\/sarahjeo\u2026","indices":[65,87]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Wed
+        Jan 14 20:12:36 +0000 2015","id":555457476410478592,"id_str":"555457476410478592","text":"This
+        is hilarious. ''Cookies'' by Douglas Adams http:\/\/t.co\/fvrlYqbw7h","source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003eTwitter
+        for Android\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":1,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"http:\/\/t.co\/fvrlYqbw7h","expanded_url":"http:\/\/thejumbuckisalmostextinct.com\/2009\/12\/cookies-by-douglas-adams\/","display_url":"thejumbuckisalmostextinct.com\/2009\/12\/cookie\u2026","indices":[46,68]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Tue
+        Jan 13 16:20:24 +0000 2015","id":555036653182795776,"id_str":"555036653182795776","text":"A
+        scientific approach to the best chicken stock by @seriouseats http:\/\/t.co\/89ShFlq7MG","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"seriouseats","name":"Serious
+        Eats","id":2869531,"id_str":"2869531","indices":[51,63]}],"urls":[{"url":"http:\/\/t.co\/89ShFlq7MG","expanded_url":"http:\/\/www.seriouseats.com\/2014\/10\/how-to-make-rich-flavorful-easy-chicken-stock.html","display_url":"seriouseats.com\/2014\/10\/how-to\u2026","indices":[64,86]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Fri
+        Jan 02 14:17:27 +0000 2015","id":551019442600443905,"id_str":"551019442600443905","text":"@cristinabacalso
+        Hey there! It\u2019s called Castel Montecroce Trattoria https:\/\/t.co\/YDZT8EfX80","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":551016892178391040,"in_reply_to_status_id_str":"551016892178391040","in_reply_to_user_id":45979314,"in_reply_to_user_id_str":"45979314","in_reply_to_screen_name":"cristinabacalso","user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"cristinabacalso","name":"Cristina
+        Bacalso","id":45979314,"id_str":"45979314","indices":[0,16]}],"urls":[{"url":"https:\/\/t.co\/YDZT8EfX80","expanded_url":"https:\/\/plus.google.com\/110199856631914548293\/about","display_url":"plus.google.com\/11019985663191\u2026","indices":[68,91]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Sat
+        Dec 27 11:04:19 +0000 2014","id":548796512768380928,"id_str":"548796512768380928","text":"@amybowtell
+        Thank you! I''m not sure really, I bet you could do some live processing with
+        a webcam or something. That might be cool?","source":"\u003ca href=\"http:\/\/twitter.com\/download\/android\"
+        rel=\"nofollow\"\u003eTwitter for Android\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":548782876490469376,"in_reply_to_status_id_str":"548782876490469376","in_reply_to_user_id":31996044,"in_reply_to_user_id_str":"31996044","in_reply_to_screen_name":"amybowtell","user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"amybowtell","name":"Amy
+        Bowtell","id":31996044,"id_str":"31996044","indices":[0,11]}],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Mon
+        Dec 22 17:05:38 +0000 2014","id":547075500020359168,"id_str":"547075500020359168","text":"High
+        speed M&amp;M sorting machine http:\/\/t.co\/HzyNxV9b3H","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"http:\/\/t.co\/HzyNxV9b3H","expanded_url":"http:\/\/www.reviewmylife.co.uk\/blog\/2014\/12\/22\/high-speed-mandm-sorting-machine\/","display_url":"reviewmylife.co.uk\/blog\/2014\/12\/2\u2026","indices":[35,57]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Mon
+        Dec 15 16:31:04 +0000 2014","id":544530089690816512,"id_str":"544530089690816512","text":"RT
+        @TheNextWeb: Seedcamp invests in 7 new startups including app-controlled cameras
+        and machine intelligence http:\/\/t.co\/BH3l2l2qdG http:\/\/\u2026","source":"\u003ca
+        href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweeted_status":{"created_at":"Mon
+        Dec 15 12:02:58 +0000 2014","id":544462616505372672,"id_str":"544462616505372672","text":"Seedcamp
+        invests in 7 new startups including app-controlled cameras and machine intelligence
+        http:\/\/t.co\/BH3l2l2qdG http:\/\/t.co\/lLTGEI5JC6","source":"\u003ca href=\"http:\/\/coschedule.com\"
+        rel=\"nofollow\"\u003eCoSchedule\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":10876852,"id_str":"10876852"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":34,"favorite_count":19,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"http:\/\/t.co\/BH3l2l2qdG","expanded_url":"http:\/\/tnw.co\/1GHaiHP","display_url":"tnw.co\/1GHaiHP","indices":[93,115]}],"media":[{"id":544462616463417344,"id_str":"544462616463417344","indices":[116,138],"media_url":"http:\/\/pbs.twimg.com\/media\/B45R3W_IIAAau5n.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/B45R3W_IIAAau5n.jpg","url":"http:\/\/t.co\/lLTGEI5JC6","display_url":"pic.twitter.com\/lLTGEI5JC6","expanded_url":"http:\/\/twitter.com\/TheNextWeb\/status\/544462616505372672\/photo\/1","type":"photo","sizes":{"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":660,"h":276,"resize":"fit"},"medium":{"w":600,"h":250,"resize":"fit"},"small":{"w":340,"h":142,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":544462616463417344,"id_str":"544462616463417344","indices":[116,138],"media_url":"http:\/\/pbs.twimg.com\/media\/B45R3W_IIAAau5n.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/B45R3W_IIAAau5n.jpg","url":"http:\/\/t.co\/lLTGEI5JC6","display_url":"pic.twitter.com\/lLTGEI5JC6","expanded_url":"http:\/\/twitter.com\/TheNextWeb\/status\/544462616505372672\/photo\/1","type":"photo","sizes":{"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":660,"h":276,"resize":"fit"},"medium":{"w":600,"h":250,"resize":"fit"},"small":{"w":340,"h":142,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"retweet_count":34,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"TheNextWeb","name":"The
+        Next Web","id":10876852,"id_str":"10876852","indices":[3,14]}],"urls":[{"url":"http:\/\/t.co\/BH3l2l2qdG","expanded_url":"http:\/\/tnw.co\/1GHaiHP","display_url":"tnw.co\/1GHaiHP","indices":[109,131]}],"media":[{"id":544462616463417344,"id_str":"544462616463417344","indices":[139,140],"media_url":"http:\/\/pbs.twimg.com\/media\/B45R3W_IIAAau5n.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/B45R3W_IIAAau5n.jpg","url":"http:\/\/t.co\/lLTGEI5JC6","display_url":"pic.twitter.com\/lLTGEI5JC6","expanded_url":"http:\/\/twitter.com\/TheNextWeb\/status\/544462616505372672\/photo\/1","type":"photo","sizes":{"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":660,"h":276,"resize":"fit"},"medium":{"w":600,"h":250,"resize":"fit"},"small":{"w":340,"h":142,"resize":"fit"}},"source_status_id":544462616505372672,"source_status_id_str":"544462616505372672","source_user_id":10876852,"source_user_id_str":"10876852"}]},"extended_entities":{"media":[{"id":544462616463417344,"id_str":"544462616463417344","indices":[139,140],"media_url":"http:\/\/pbs.twimg.com\/media\/B45R3W_IIAAau5n.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/B45R3W_IIAAau5n.jpg","url":"http:\/\/t.co\/lLTGEI5JC6","display_url":"pic.twitter.com\/lLTGEI5JC6","expanded_url":"http:\/\/twitter.com\/TheNextWeb\/status\/544462616505372672\/photo\/1","type":"photo","sizes":{"thumb":{"w":150,"h":150,"resize":"crop"},"large":{"w":660,"h":276,"resize":"fit"},"medium":{"w":600,"h":250,"resize":"fit"},"small":{"w":340,"h":142,"resize":"fit"}},"source_status_id":544462616505372672,"source_status_id_str":"544462616505372672","source_user_id":10876852,"source_user_id_str":"10876852"}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Thu
+        Dec 11 20:45:23 +0000 2014","id":543144538257494016,"id_str":"543144538257494016","text":"@jmartink
+        \"@IrishCentral: #weatherbomb storm raises orange weather alert in Ireland
+        this week http:\/\/t.co\/0GvGJ0E8Jn http:\/\/t.co\/W1eLfhD9Pe\"","source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003eTwitter
+        for Android\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":14578385,"in_reply_to_user_id_str":"14578385","in_reply_to_screen_name":"jmartink","user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[{"text":"weatherbomb","indices":[26,38]}],"symbols":[],"user_mentions":[{"screen_name":"jmartink","name":"Martin
+        Karlsson","id":14578385,"id_str":"14578385","indices":[0,9]},{"screen_name":"IrishCentral","name":"IrishCentral","id":17899893,"id_str":"17899893","indices":[11,24]}],"urls":[{"url":"http:\/\/t.co\/0GvGJ0E8Jn","expanded_url":"http:\/\/irsh.us\/1whlgRM","display_url":"irsh.us\/1whlgRM","indices":[94,116]}],"media":[{"id":542750540619591680,"id_str":"542750540619591680","indices":[117,139],"media_url":"http:\/\/pbs.twimg.com\/media\/B4g8vbdIMAAeykM.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/B4g8vbdIMAAeykM.jpg","url":"http:\/\/t.co\/W1eLfhD9Pe","display_url":"pic.twitter.com\/W1eLfhD9Pe","expanded_url":"http:\/\/twitter.com\/IrishCentral\/status\/542974600343089152\/photo\/1","type":"photo","sizes":{"large":{"w":650,"h":488,"resize":"fit"},"small":{"w":340,"h":255,"resize":"fit"},"medium":{"w":600,"h":450,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"}},"source_status_id":542974600343089152,"source_status_id_str":"542974600343089152","source_user_id":17899893,"source_user_id_str":"17899893"}]},"extended_entities":{"media":[{"id":542750540619591680,"id_str":"542750540619591680","indices":[117,139],"media_url":"http:\/\/pbs.twimg.com\/media\/B4g8vbdIMAAeykM.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/B4g8vbdIMAAeykM.jpg","url":"http:\/\/t.co\/W1eLfhD9Pe","display_url":"pic.twitter.com\/W1eLfhD9Pe","expanded_url":"http:\/\/twitter.com\/IrishCentral\/status\/542974600343089152\/photo\/1","type":"photo","sizes":{"large":{"w":650,"h":488,"resize":"fit"},"small":{"w":340,"h":255,"resize":"fit"},"medium":{"w":600,"h":450,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"}},"source_status_id":542974600343089152,"source_status_id_str":"542974600343089152","source_user_id":17899893,"source_user_id_str":"17899893"}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Thu
+        Dec 11 10:47:21 +0000 2014","id":542994038866313216,"id_str":"542994038866313216","text":"This
+        song https:\/\/t.co\/LtfsnPDhur \ud83d\udc4f","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/LtfsnPDhur","expanded_url":"https:\/\/soundcloud.com\/mermaidsmha\/night-walkin","display_url":"soundcloud.com\/mermaidsmha\/ni\u2026","indices":[10,33]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Wed
+        Dec 10 22:36:41 +0000 2014","id":542810157626183680,"id_str":"542810157626183680","text":"This
+        guy rocks: https:\/\/t.co\/Ih0IAwOVv5 Submarine Sandwich by PES","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/Ih0IAwOVv5","expanded_url":"https:\/\/www.youtube.com\/watch?v=EWEl8-PHhMI","display_url":"youtube.com\/watch?v=EWEl8-\u2026","indices":[16,39]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Sat
+        Dec 06 16:39:25 +0000 2014","id":541270698384449536,"id_str":"541270698384449536","text":"@GhastlyChimera
+        Frazzles","source":"\u003ca href=\"http:\/\/twitter.com\/download\/android\"
+        rel=\"nofollow\"\u003eTwitter for Android\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":541264639926218752,"in_reply_to_status_id_str":"541264639926218752","in_reply_to_user_id":401521843,"in_reply_to_user_id_str":"401521843","in_reply_to_screen_name":"GhastlyChimera","user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"GhastlyChimera","name":"Alex
+        Novakovic","id":401521843,"id_str":"401521843","indices":[0,15]}],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Wed
+        Nov 26 15:59:58 +0000 2014","id":537636893656350720,"id_str":"537636893656350720","text":"@BoweFrankema
+        @uselateral @TNWConference YAY","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":537635907546144768,"in_reply_to_status_id_str":"537635907546144768","in_reply_to_user_id":91139811,"in_reply_to_user_id_str":"91139811","in_reply_to_screen_name":"BoweFrankema","user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"BoweFrankema","name":"Bowe
+        Frankema","id":91139811,"id_str":"91139811","indices":[0,13]},{"screen_name":"uselateral","name":"Lateral","id":2858850268,"id_str":"2858850268","indices":[14,25]},{"screen_name":"TNWconference","name":"#TNWEurope","id":99982789,"id_str":"99982789","indices":[26,40]}],"urls":[]},"favorited":false,"retweeted":false,"lang":"und"},{"created_at":"Wed
+        Nov 26 15:54:23 +0000 2014","id":537635487926984704,"id_str":"537635487926984704","text":"Vote
+        for Lateral so we get a chance to present on stage: http:\/\/t.co\/gqah4kS0db
+        #TNWUSA @uselateral","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[{"text":"TNWUSA","indices":[80,87]}],"symbols":[],"user_mentions":[{"screen_name":"uselateral","name":"Lateral","id":2858850268,"id_str":"2858850268","indices":[88,99]}],"urls":[{"url":"http:\/\/t.co\/gqah4kS0db","expanded_url":"http:\/\/thenextweb.com\/boost\/","display_url":"thenextweb.com\/boost\/","indices":[57,79]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Wed
+        Nov 26 15:11:22 +0000 2014","id":537624663095250944,"id_str":"537624663095250944","text":"Really
+        enjoying the @jackmaster Mastermix 2014. My second listen in 24hrs! https:\/\/t.co\/NZPsxvdxN1","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"jackmaster","name":"JACKMASTER","id":18700216,"id_str":"18700216","indices":[20,31]}],"urls":[{"url":"https:\/\/t.co\/NZPsxvdxN1","expanded_url":"https:\/\/soundcloud.com\/jackmaster\/jackmaster-mastermix-2014","display_url":"soundcloud.com\/jackmaster\/jac\u2026","indices":[75,98]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Mon
+        Nov 24 15:02:08 +0000 2014","id":536897560833970177,"id_str":"536897560833970177","text":"How
+        we name colours in Chinese and English http:\/\/t.co\/J6LpxWE5gW","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":1,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"http:\/\/t.co\/J6LpxWE5gW","expanded_url":"http:\/\/muyueh.com\/greenhoney\/","display_url":"muyueh.com\/greenhoney\/","indices":[43,65]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Thu
+        Nov 20 13:31:50 +0000 2014","id":535425284884168704,"id_str":"535425284884168704","text":"I
+        enjoyed this: http:\/\/t.co\/XjOmkwbL9p","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"http:\/\/t.co\/XjOmkwbL9p","expanded_url":"http:\/\/www.theawl.com\/2014\/11\/how-to-draw-people-on-the-subway","display_url":"theawl.com\/2014\/11\/how-to\u2026","indices":[16,38]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Tue
+        Nov 18 19:49:40 +0000 2014","id":534795593672306688,"id_str":"534795593672306688","text":"@isjackwild
+        Yeah but also could be #fragments or ?params=hello .. I guess it\u2019s not
+        possible without looking at the page contents?","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":534794659894398978,"in_reply_to_status_id_str":"534794659894398978","in_reply_to_user_id":258755947,"in_reply_to_user_id_str":"258755947","in_reply_to_screen_name":"isjackwild","user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[{"text":"fragments","indices":[35,45]}],"symbols":[],"user_mentions":[{"screen_name":"isjackwild","name":"Jack
+        Wild","id":258755947,"id_str":"258755947","indices":[0,11]}],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Tue
+        Nov 18 19:32:16 +0000 2014","id":534791216035266561,"id_str":"534791216035266561","text":"If
+        I have a list of URLs, how can I check if a given URL is already in the list?
+        What if it has www. and one in the list doesn\u2019t? Hmm :\/","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Thu
+        Nov 13 14:32:17 +0000 2014","id":532903783798685696,"id_str":"532903783798685696","text":"I
+        can''t help but think Philae cheese steak whenever I see it written","source":"\u003ca
+        href=\"http:\/\/twitter.com\/download\/android\" rel=\"nofollow\"\u003eTwitter
+        for Android\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":1,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Thu
+        Nov 13 09:38:08 +0000 2014","id":532829758422515712,"id_str":"532829758422515712","text":"@LiveAndLetDraw
+        Hah thanks, maybe I\u2019ll give it a go if I\u2019m in a tough position ;)","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":532612769107828736,"in_reply_to_status_id_str":"532612769107828736","in_reply_to_user_id":119682861,"in_reply_to_user_id_str":"119682861","in_reply_to_screen_name":"LiveAndLetDraw","user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"LiveAndLetDraw","name":"Jason
+        Turner","id":119682861,"id_str":"119682861","indices":[0,15]}],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Tue
+        Nov 11 09:41:29 +0000 2014","id":532105824731418624,"id_str":"532105824731418624","text":"This
+        is excellent, slightly audacious https:\/\/t.co\/u58AomW8gk \"The Random Darknet
+        Shopper is an automated online shopping bot\"","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":2,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/u58AomW8gk","expanded_url":"https:\/\/wwwwwwwwwwwwwwwwwwwwww.bitnik.org\/r\/","display_url":"wwwwwwwwwwwwwwwwwwwwww.bitnik.org\/r\/","indices":[38,61]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Mon
+        Nov 10 19:13:27 +0000 2014","id":531887377296670720,"id_str":"531887377296670720","text":"26.90\u20ac\/kg
+        for organic chicken breast? How much for a live chicken??","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Mon
+        Nov 10 08:31:33 +0000 2014","id":531725838325403649,"id_str":"531725838325403649","text":"What''s
+        up with this new \"Top Trends\" in Twitter for Android? It''s terrible! I
+        miss the \"Discover\" and \"Activity\" tabs already.","source":"\u003ca href=\"http:\/\/twitter.com\/download\/android\"
+        rel=\"nofollow\"\u003eTwitter for Android\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Sat
+        Nov 08 10:33:48 +0000 2014","id":531031827319119872,"id_str":"531031827319119872","text":"Ah
+        awesome, I\u2019ve been on your website for around 30 seconds.. Perfect time
+        to interrupt my reading by asking me to join your mailing list.","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Sun
+        Nov 02 11:35:09 +0000 2014","id":528872939287232512,"id_str":"528872939287232512","text":"Tumblr
+        is the Myspace of 2014","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Wed
+        Oct 29 12:02:31 +0000 2014","id":527430274117013505,"id_str":"527430274117013505","text":"The
+        Temptations - Papa was a Rolling Stone https:\/\/t.co\/zO0SW4HYkg","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/zO0SW4HYkg","expanded_url":"https:\/\/www.youtube.com\/watch?v=Hcqs5z0yEl4","display_url":"youtube.com\/watch?v=Hcqs5z\u2026","indices":[43,66]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Tue
+        Oct 28 15:15:35 +0000 2014","id":527116475166097408,"id_str":"527116475166097408","text":"No
+        SoundCloud, for the 100th time I don\u2019t want to save any tracks to my
+        likes!","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Sun
+        Oct 26 13:34:10 +0000 2014","id":526366177980067840,"id_str":"526366177980067840","text":"This
+        is nice: Hiroshi Yoshimura \u2013 Mori No Yoake - Forest Side 2 https:\/\/t.co\/98Q4iyagDZ","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/98Q4iyagDZ","expanded_url":"https:\/\/www.youtube.com\/watch?v=dpKL1hvTsUM","display_url":"youtube.com\/watch?v=dpKL1h\u2026","indices":[64,87]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Fri
+        Oct 24 14:03:21 +0000 2014","id":525648743069396992,"id_str":"525648743069396992","text":"Maps
+        Of Street Layouts Colored By Orientation http:\/\/t.co\/yFBysoN2MW","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"http:\/\/t.co\/yFBysoN2MW","expanded_url":"http:\/\/www.datapointed.net\/2014\/10\/maps-of-street-grids-by-orientation\/","display_url":"datapointed.net\/2014\/10\/maps-o\u2026","indices":[46,68]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Tue
+        Oct 21 11:17:56 +0000 2014","id":524519950883364865,"id_str":"524519950883364865","text":"@isjackwild
+        With Handlebars the idea is to try keep any JS out of the template.. You could
+        do groupBy in EJS though.","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":524518001862008832,"in_reply_to_status_id_str":"524518001862008832","in_reply_to_user_id":258755947,"in_reply_to_user_id_str":"258755947","in_reply_to_screen_name":"isjackwild","user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"isjackwild","name":"Jack
+        Wild","id":258755947,"id_str":"258755947","indices":[0,11]}],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Tue
+        Oct 21 10:40:51 +0000 2014","id":524510621933379584,"id_str":"524510621933379584","text":"@isjackwild
+        Could you use groupBy? http:\/\/t.co\/piLMbu0NaG _.groupBy(object, \u2018category\u2019);","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":524504260609069056,"in_reply_to_status_id_str":"524504260609069056","in_reply_to_user_id":258755947,"in_reply_to_user_id_str":"258755947","in_reply_to_screen_name":"isjackwild","user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"isjackwild","name":"Jack
+        Wild","id":258755947,"id_str":"258755947","indices":[0,11]}],"urls":[{"url":"http:\/\/t.co\/piLMbu0NaG","expanded_url":"http:\/\/underscorejs.org\/#groupBy","display_url":"underscorejs.org\/#groupBy","indices":[35,57]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Tue
+        Oct 21 10:31:40 +0000 2014","id":524508309270061056,"id_str":"524508309270061056","text":"RT
+        @OnMarsFirst: now i am on mars","source":"\u003ca href=\"http:\/\/twitter.com\"
+        rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweeted_status":{"created_at":"Sun
+        Aug 03 02:21:10 +0000 2014","id":495756230799814657,"id_str":"495756230799814657","text":"now
+        i am on mars","source":"\u003ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter
+        Web Client\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":2702332878,"id_str":"2702332878"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":62,"favorite_count":75,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},"retweet_count":62,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"OnMarsFirst","name":"Evghenia
+        is on Mars","id":2702332878,"id_str":"2702332878","indices":[3,15]}],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Fri
+        Oct 17 09:46:33 +0000 2014","id":523047402841079808,"id_str":"523047402841079808","text":"It
+        was the best of times, it was the blurst of times?! http:\/\/t.co\/DCa6XBASOb","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[],"media":[{"id":523047400902909954,"id_str":"523047400902909954","indices":[55,77],"media_url":"http:\/\/pbs.twimg.com\/media\/B0I81wOCYAIoFnm.png","media_url_https":"https:\/\/pbs.twimg.com\/media\/B0I81wOCYAIoFnm.png","url":"http:\/\/t.co\/DCa6XBASOb","display_url":"pic.twitter.com\/DCa6XBASOb","expanded_url":"http:\/\/twitter.com\/maxnovakovic\/status\/523047402841079808\/photo\/1","type":"photo","sizes":{"large":{"w":1024,"h":760,"resize":"fit"},"medium":{"w":600,"h":445,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"small":{"w":340,"h":252,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":523047400902909954,"id_str":"523047400902909954","indices":[55,77],"media_url":"http:\/\/pbs.twimg.com\/media\/B0I81wOCYAIoFnm.png","media_url_https":"https:\/\/pbs.twimg.com\/media\/B0I81wOCYAIoFnm.png","url":"http:\/\/t.co\/DCa6XBASOb","display_url":"pic.twitter.com\/DCa6XBASOb","expanded_url":"http:\/\/twitter.com\/maxnovakovic\/status\/523047402841079808\/photo\/1","type":"photo","sizes":{"large":{"w":1024,"h":760,"resize":"fit"},"medium":{"w":600,"h":445,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"small":{"w":340,"h":252,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Wed
+        Oct 15 17:57:40 +0000 2014","id":522446221420797952,"id_str":"522446221420797952","text":"Q
+        Lazzarus - Goodbye Horses https:\/\/t.co\/MEf6pBH0za","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/MEf6pBH0za","expanded_url":"https:\/\/www.youtube.com\/watch?v=X_DVS_303kQ","display_url":"youtube.com\/watch?v=X_DVS_\u2026","indices":[28,51]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Wed
+        Oct 15 10:48:58 +0000 2014","id":522338334858027008,"id_str":"522338334858027008","text":"Love
+        this video: BICEP - Lyk Lyk https:\/\/t.co\/zFMF8fstGa","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":1,"favorite_count":1,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/zFMF8fstGa","expanded_url":"https:\/\/www.youtube.com\/watch?v=6dYQNlWQ4UY","display_url":"youtube.com\/watch?v=6dYQNl\u2026","indices":[33,56]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Tue
+        Oct 14 13:48:06 +0000 2014","id":522021026696548352,"id_str":"522021026696548352","text":"@GhastlyChimera
+        https:\/\/t.co\/G2TworJSKy","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":401521843,"in_reply_to_user_id_str":"401521843","in_reply_to_screen_name":"GhastlyChimera","user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"GhastlyChimera","name":"Alex
+        Novakovic","id":401521843,"id_str":"401521843","indices":[0,15]}],"urls":[{"url":"https:\/\/t.co\/G2TworJSKy","expanded_url":"https:\/\/www.youtube.com\/watch?v=4DgbUBoxa48","display_url":"youtube.com\/watch?v=4DgbUB\u2026","indices":[16,39]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"und"},{"created_at":"Tue
+        Oct 14 13:30:33 +0000 2014","id":522016609893122050,"id_str":"522016609893122050","text":"Clap!
+        Clap! - \u201cKuj Yato\u201d https:\/\/t.co\/iWJSlUBI4f","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/iWJSlUBI4f","expanded_url":"https:\/\/www.youtube.com\/watch?v=v4sDiCKdZ4M","display_url":"youtube.com\/watch?v=v4sDiC\u2026","indices":[25,48]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"ht"},{"created_at":"Mon
+        Oct 13 17:23:58 +0000 2014","id":521712963250835457,"id_str":"521712963250835457","text":"Very
+        informative - The most widely spoken language in the UK (other than Dutch)
+        by county http:\/\/t.co\/pa41ylIFtB","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[],"media":[{"id":521712962344853504,"id_str":"521712962344853504","indices":[90,112],"media_url":"http:\/\/pbs.twimg.com\/media\/Bz1_LNNIIAAyUcf.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/Bz1_LNNIIAAyUcf.jpg","url":"http:\/\/t.co\/pa41ylIFtB","display_url":"pic.twitter.com\/pa41ylIFtB","expanded_url":"http:\/\/twitter.com\/maxnovakovic\/status\/521712963250835457\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":369,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"medium":{"w":600,"h":652,"resize":"fit"},"large":{"w":942,"h":1024,"resize":"fit"}}}]},"extended_entities":{"media":[{"id":521712962344853504,"id_str":"521712962344853504","indices":[90,112],"media_url":"http:\/\/pbs.twimg.com\/media\/Bz1_LNNIIAAyUcf.jpg","media_url_https":"https:\/\/pbs.twimg.com\/media\/Bz1_LNNIIAAyUcf.jpg","url":"http:\/\/t.co\/pa41ylIFtB","display_url":"pic.twitter.com\/pa41ylIFtB","expanded_url":"http:\/\/twitter.com\/maxnovakovic\/status\/521712963250835457\/photo\/1","type":"photo","sizes":{"small":{"w":340,"h":369,"resize":"fit"},"thumb":{"w":150,"h":150,"resize":"crop"},"medium":{"w":600,"h":652,"resize":"fit"},"large":{"w":942,"h":1024,"resize":"fit"}}}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Mon
+        Oct 13 08:47:33 +0000 2014","id":521583004700147712,"id_str":"521583004700147712","text":"What
+        the Flag Says - The complex histories woven into a simple piece of cloth https:\/\/t.co\/lWyZ8kdROR","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":1,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/lWyZ8kdROR","expanded_url":"https:\/\/medium.com\/re-form\/what-the-flag-says-6b48ef093e6f","display_url":"medium.com\/re-form\/what-t\u2026","indices":[78,101]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Sat
+        Oct 11 11:28:06 +0000 2014","id":520898634129633281,"id_str":"520898634129633281","text":"That\u2019s
+        funny. The key used to encrypt Snapchat images is the concatenation of an
+        ID and ''seems legit\u2026'' https:\/\/t.co\/Iw9EjxvRP3","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/Iw9EjxvRP3","expanded_url":"https:\/\/github.com\/programa-stic\/snapchat-decrypt","display_url":"github.com\/programa-stic\/\u2026","indices":[103,126]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Fri
+        Oct 10 10:43:07 +0000 2014","id":520524923711000576,"id_str":"520524923711000576","text":"Mapping
+        the Manhattan Apartment that\u2019s the Farthest from any Subway http:\/\/t.co\/9L7lqPccZX","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":1,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"http:\/\/t.co\/9L7lqPccZX","expanded_url":"http:\/\/iquantny.tumblr.com\/post\/99544282749\/found-the-manhattan-apartment-thats-the-farthest-from","display_url":"iquantny.tumblr.com\/post\/995442827\u2026","indices":[68,90]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Fri
+        Oct 10 09:44:00 +0000 2014","id":520510046023995393,"id_str":"520510046023995393","text":"RT
+        @moon_beamed: At a Glance: What Apple Watch Means for Typography @HuffPostBlog
+        http:\/\/t.co\/HQOA1Bgced via @HuffPostTech","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweeted_status":{"created_at":"Fri
+        Oct 10 08:21:36 +0000 2014","id":520489310873608193,"id_str":"520489310873608193","text":"At
+        a Glance: What Apple Watch Means for Typography @HuffPostBlog http:\/\/t.co\/HQOA1Bgced
+        via @HuffPostTech","source":"\u003ca href=\"https:\/\/dev.twitter.com\/docs\/tfw\"
+        rel=\"nofollow\"\u003eTwitter for Websites\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":588188684,"id_str":"588188684"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":1,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"HuffPostBlog","name":"Huffington
+        Post Blog","id":131500972,"id_str":"131500972","indices":[51,64]},{"screen_name":"HuffPostTech","name":"HuffPost
+        Tech","id":73147282,"id_str":"73147282","indices":[92,105]}],"urls":[{"url":"http:\/\/t.co\/HQOA1Bgced","expanded_url":"http:\/\/huff.to\/1slf0bb","display_url":"huff.to\/1slf0bb","indices":[65,87]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},"retweet_count":1,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"moon_beamed","name":"Danielle
+        Reid","id":588188684,"id_str":"588188684","indices":[3,15]},{"screen_name":"HuffPostBlog","name":"Huffington
+        Post Blog","id":131500972,"id_str":"131500972","indices":[68,81]},{"screen_name":"HuffPostTech","name":"HuffPost
+        Tech","id":73147282,"id_str":"73147282","indices":[109,122]}],"urls":[{"url":"http:\/\/t.co\/HQOA1Bgced","expanded_url":"http:\/\/huff.to\/1slf0bb","display_url":"huff.to\/1slf0bb","indices":[82,104]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Thu
+        Oct 09 12:38:02 +0000 2014","id":520191457596936195,"id_str":"520191457596936195","text":"New
+        tube carriages for London http:\/\/t.co\/qffkN4SWSc","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"http:\/\/t.co\/qffkN4SWSc","expanded_url":"http:\/\/www.tfl.gov.uk\/campaign\/new-tube-for-london","display_url":"tfl.gov.uk\/campaign\/new-t\u2026","indices":[30,52]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Thu
+        Oct 09 12:22:48 +0000 2014","id":520187623298859008,"id_str":"520187623298859008","text":"Making
+        japanese food samples https:\/\/t.co\/mZ4EfXXvUp","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/mZ4EfXXvUp","expanded_url":"https:\/\/www.youtube.com\/watch?v=PPQrNkOgttQ","display_url":"youtube.com\/watch?v=PPQrNk\u2026","indices":[29,52]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Tue
+        Oct 07 19:47:30 +0000 2014","id":519574760741543936,"id_str":"519574760741543936","text":"Is
+        it possible to own too many socks?","source":"\u003ca href=\"http:\/\/twitter.com\/download\/android\"
+        rel=\"nofollow\"\u003eTwitter for Android\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Thu
+        Oct 02 10:06:07 +0000 2014","id":517616509305520128,"id_str":"517616509305520128","text":"I
+        know it\u2019s impractical and stupid but I want this https:\/\/t.co\/kLaGYk8iyw","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":1,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/kLaGYk8iyw","expanded_url":"https:\/\/github.com\/Swordfish90\/cool-retro-term","display_url":"github.com\/Swordfish90\/co\u2026","indices":[51,74]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Mon
+        Sep 29 20:21:53 +0000 2014","id":516684307797393408,"id_str":"516684307797393408","text":"The
+        Simpsons couch gag by Don Hertzfeldt is great https:\/\/t.co\/vtW3hy2iGN","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/vtW3hy2iGN","expanded_url":"https:\/\/vid.me\/VFj","display_url":"vid.me\/VFj","indices":[50,73]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Fri
+        Sep 26 10:34:39 +0000 2014","id":515449364236738560,"id_str":"515449364236738560","text":"alt-J
+        - Left Hand Free https:\/\/t.co\/T98MfOeqij","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
+        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/T98MfOeqij","expanded_url":"https:\/\/www.youtube.com\/watch?v=NRWUoDpo2fo","display_url":"youtube.com\/watch?v=NRWUoD\u2026","indices":[23,46]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"}]'
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://jonathandub.in/cognizance/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://vimeo.com/116582567
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://www.forbes.com/sites/sarahjeong/2015/01/14/the-dhs-agent-who-infiltrated-silk-road-to-take-down-its-kingpin/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://thejumbuckisalmostextinct.com/2009/12/cookies-by-douglas-adams/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://www.seriouseats.com/2014/10/how-to-make-rich-flavorful-easy-chicken-stock.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://plus.google.com/110199856631914548293/about
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://www.reviewmylife.co.uk/blog/2014/12/22/high-speed-mandm-sorting-machine/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://tnw.co/1GHaiHP
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://irsh.us/1whlgRM
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://soundcloud.com/mermaidsmha/night-walkin
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://www.youtube.com/watch?v=EWEl8-PHhMI
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://thenextweb.com/boost/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://soundcloud.com/jackmaster/jackmaster-mastermix-2014
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://muyueh.com/greenhoney/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://www.theawl.com/2014/11/how-to-draw-people-on-the-subway
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://wwwwwwwwwwwwwwwwwwwwww.bitnik.org/r/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://www.youtube.com/watch?v=Hcqs5z0yEl4
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://www.youtube.com/watch?v=dpKL1hvTsUM
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://underscorejs.org/%23groupBy
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:16 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://www.youtube.com/watch?v=X_DVS_303kQ
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:17 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://www.youtube.com/watch?v=6dYQNlWQ4UY
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:17 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:17 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://www.youtube.com/watch?v=4DgbUBoxa48
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:17 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:17 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://www.youtube.com/watch?v=v4sDiCKdZ4M
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:17 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:17 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://medium.com/re-form/what-the-flag-says-6b48ef093e6f
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:17 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:17 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://github.com/programa-stic/snapchat-decrypt
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:17 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:17 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://iquantny.tumblr.com/post/99544282749/found-the-manhattan-apartment-thats-the-farthest-from
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:17 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:17 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://huff.to/1slf0bb
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:17 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:17 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=http://www.tfl.gov.uk/campaign/new-tube-for-london
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:17 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:17 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://www.youtube.com/watch?v=PPQrNkOgttQ
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:17 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:17 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://github.com/Swordfish90/cool-retro-term
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:17 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:17 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://vid.me/VFj
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:17 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:17 GMT
+- request:
+    method: get
+    uri: https://document-parser.lateral.io/boilerpipe/?url=https://www.youtube.com/watch?v=NRWUoDpo2fo
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - HTTPClient/1.0 (2.6.0.1, ruby 2.0.0 (2014-02-24))
+      Accept:
+      - '*/*'
+      Date:
+      - Fri, 23 Jan 2015 23:32:17 GMT
+      Authorization:
+      - Basic bGF0ZXJhbDo=
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.1.19
+      Date:
+      - Fri, 23 Jan 2015 23:32:16 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      Status:
+      - 401 Unauthorized
+      Www-Authenticate:
+      - Basic realm="Restricted Area"
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 23 Jan 2015 23:32:17 GMT
+recorded_with: VCR 2.9.3
