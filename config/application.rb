@@ -8,8 +8,6 @@ Bundler.require(*Rails.groups)
 
 module OhHey
   class Application < Rails::Application
-    WebMock.allow_net_connect!
-
     config.autoload_paths += %W(#{config.root}/lib)
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
     # Settings in config/environments/* take precedence over those specified here.

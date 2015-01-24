@@ -17,9 +17,19 @@ class TwitterUser < ActiveRecord::Base
     API.add_user(id)
     tweets = meaningful_tweets(users_tweets)
     tweets.each { |tweet| Tweet.create_from_tweet tweet, self }
+    # save_following
   end
 
   # private
+
+  def save_following
+    list = TW_CLIENT.friends(twitter_username, skip_status: true, include_user_entities: false)
+    list = list.map do |follower|
+      { id: follower.id, image: follower.profile_image_url.to_s.gsub('_normal', ''),
+        name: follower.name, screen_name: follower.screen_name, description: follower.description }
+    end
+    update_column('following', list)
+  end
 
   def meaningful_tweets(tweets)
     # Get tweets with links in
@@ -40,15 +50,15 @@ class TwitterUser < ActiveRecord::Base
       # If the tweet already has a :doc key then it's cached
       if tweet.key? :doc
         response = API.add_user_document(id, tweet[:id], tweet[:doc][:body], created_at: tweet[:created_at])
-        response
-        # tweet
+        # response
+        tweet
       else
         # Create a temporary document object and send the body to the API
         tweet[:doc] = { url: tweet[:urls].first, body: bodies[tweet[:urls].first] }
         response = API.add_user_document(id, tweet[:id], tweet[:doc][:body], created_at: tweet[:created_at])
+        # response
         # Return the tweet if the API response is valid
-        response
-        # tweet unless response.key?(:error)
+        tweet unless response.key?(:error)
       end
     end.reject(&:blank?)
   end

@@ -12,7 +12,7 @@ http_interactions:
       User-Agent:
       - TwitterRubyGem/5.13.0
       Authorization:
-      - Bearer AAAAAAAAAAAAAAAAAAAAAO2MdgAAAAAAMTwnySuVXznDsBrCm7C6EgT3Qjc%3D5OoJbqCB5syKNEcBs5ma7AMTFQHziVAl3PlIz8r53Cbq27p7QX
+      - Bearer AAAAAAAAAAAAAAAAAAAAAH9jdwAAAAAAR%2BgsANMrf09dBb2gDlpkqKpHzEY%3DeZaqzX7ieY8UuFH4zunfKodXnSJFahUWKLDnR8EW2h2qx3TKHf
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -23,22 +23,22 @@ http_interactions:
       Cache-Control:
       - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
       Content-Length:
-      - '7839'
+      - '7889'
       Content-Type:
       - application/json;charset=utf-8
       Date:
-      - Fri, 23 Jan 2015 23:32:14 UTC
+      - Sat, 24 Jan 2015 17:06:04 UTC
       Expires:
       - Tue, 31 Mar 1981 05:00:00 GMT
       Last-Modified:
-      - Fri, 23 Jan 2015 23:32:14 GMT
+      - Sat, 24 Jan 2015 17:06:04 GMT
       Pragma:
       - no-cache
       Server:
       - tsa_b
       Set-Cookie:
-      - guest_id=v1%3A142205593419793014; Domain=.twitter.com; Path=/; Expires=Sun,
-        22-Jan-2017 23:32:14 UTC
+      - guest_id=v1%3A142211916475865595; Domain=.twitter.com; Path=/; Expires=Mon,
+        23-Jan-2017 17:06:04 UTC
       Status:
       - 200 OK
       Strict-Transport-Security:
@@ -46,7 +46,7 @@ http_interactions:
       X-Access-Level:
       - read
       X-Connection-Hash:
-      - d7ff3b243de91339f017ae9387865ecc
+      - 11c96e723d16b94e1677d6ae01cbab3a
       X-Content-Type-Options:
       - nosniff
       X-Frame-Options:
@@ -54,20 +54,23 @@ http_interactions:
       X-Rate-Limit-Limit:
       - '300'
       X-Rate-Limit-Remaining:
-      - '276'
+      - '299'
       X-Rate-Limit-Reset:
-      - '1422056159'
+      - '1422120064'
       X-Response-Time:
-      - '123'
+      - '70'
       X-Transaction:
-      - 9e5b779e77b5e014
+      - cf64885e33e3260b
       X-Twitter-Response-Tags:
       - BouncerCompliant
       X-Xss-Protection:
       - 1; mode=block
     body:
       encoding: UTF-8
-      string: '[{"created_at":"Thu Jan 22 09:26:34 +0000 2015","id":558193998570217473,"id_str":"558193998570217473","text":"Real
+      string: '[{"created_at":"Fri Jan 23 23:34:17 +0000 2015","id":558769720090841090,"id_str":"558769720090841090","text":"Are
+        we becoming too reliant on computers? http:\/\/t.co\/qpzubgZHDn","source":"\u003ca
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"http:\/\/t.co\/qpzubgZHDn","expanded_url":"http:\/\/www.theguardian.com\/books\/2015\/jan\/17\/nicholas-carr-are-we-becoming-too-reliant-on-computers","display_url":"theguardian.com\/books\/2015\/jan\u2026","indices":[42,64]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Thu
+        Jan 22 09:26:34 +0000 2015","id":558193998570217473,"id_str":"558193998570217473","text":"Real
         life ad blocker http:\/\/t.co\/2aGQcyHEqt","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
         rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":1,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"http:\/\/t.co\/2aGQcyHEqt","expanded_url":"http:\/\/jonathandub.in\/cognizance\/","display_url":"jonathandub.in\/cognizance\/","indices":[21,43]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Sat
         Jan 17 19:27:04 +0000 2015","id":556533179734294528,"id_str":"556533179734294528","text":"These
@@ -200,7 +203,7 @@ http_interactions:
         rel=\"nofollow\"\u003eTwitter Web Client\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweeted_status":{"created_at":"Sun
         Aug 03 02:21:10 +0000 2014","id":495756230799814657,"id_str":"495756230799814657","text":"now
         i am on mars","source":"\u003ca href=\"http:\/\/twitter.com\" rel=\"nofollow\"\u003eTwitter
-        Web Client\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":2702332878,"id_str":"2702332878"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":62,"favorite_count":75,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},"retweet_count":62,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"OnMarsFirst","name":"Evghenia
+        Web Client\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":2702332878,"id_str":"2702332878"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":62,"favorite_count":74,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},"retweet_count":62,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[{"screen_name":"OnMarsFirst","name":"Evghenia
         is on Mars","id":2702332878,"id_str":"2702332878","indices":[3,15]}],"urls":[]},"favorited":false,"retweeted":false,"lang":"en"},{"created_at":"Fri
         Oct 17 09:46:33 +0000 2014","id":523047402841079808,"id_str":"523047402841079808","text":"It
         was the best of times, it was the blurst of times?! http:\/\/t.co\/DCa6XBASOb","source":"\u003ca
@@ -259,10 +262,7 @@ http_interactions:
         href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":1,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/kLaGYk8iyw","expanded_url":"https:\/\/github.com\/Swordfish90\/cool-retro-term","display_url":"github.com\/Swordfish90\/co\u2026","indices":[51,74]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Mon
         Sep 29 20:21:53 +0000 2014","id":516684307797393408,"id_str":"516684307797393408","text":"The
         Simpsons couch gag by Don Hertzfeldt is great https:\/\/t.co\/vtW3hy2iGN","source":"\u003ca
-        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/vtW3hy2iGN","expanded_url":"https:\/\/vid.me\/VFj","display_url":"vid.me\/VFj","indices":[50,73]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"},{"created_at":"Fri
-        Sep 26 10:34:39 +0000 2014","id":515449364236738560,"id_str":"515449364236738560","text":"alt-J
-        - Left Hand Free https:\/\/t.co\/T98MfOeqij","source":"\u003ca href=\"https:\/\/about.twitter.com\/products\/tweetdeck\"
-        rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/T98MfOeqij","expanded_url":"https:\/\/www.youtube.com\/watch?v=NRWUoDpo2fo","display_url":"youtube.com\/watch?v=NRWUoD\u2026","indices":[23,46]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"}]'
+        href=\"https:\/\/about.twitter.com\/products\/tweetdeck\" rel=\"nofollow\"\u003eTweetDeck\u003c\/a\u003e","truncated":false,"in_reply_to_status_id":null,"in_reply_to_status_id_str":null,"in_reply_to_user_id":null,"in_reply_to_user_id_str":null,"in_reply_to_screen_name":null,"user":{"id":14625054,"id_str":"14625054"},"geo":null,"coordinates":null,"place":null,"contributors":null,"retweet_count":0,"favorite_count":0,"entities":{"hashtags":[],"symbols":[],"user_mentions":[],"urls":[{"url":"https:\/\/t.co\/vtW3hy2iGN","expanded_url":"https:\/\/vid.me\/VFj","display_url":"vid.me\/VFj","indices":[50,73]}]},"favorited":false,"retweeted":false,"possibly_sensitive":false,"lang":"en"}]'
     http_version: 
-  recorded_at: Fri, 23 Jan 2015 23:32:14 GMT
+  recorded_at: Sat, 24 Jan 2015 17:06:05 GMT
 recorded_with: VCR 2.9.3
