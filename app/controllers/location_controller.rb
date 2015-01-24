@@ -32,7 +32,7 @@ class LocationController < ApplicationController
   # What display on Twitter when not two people?
   def data
     news_api = LateralRecommender::API.new ENV['API_KEY'], 'news'
-    active_users = User.order('distance ASC').where('distance = "NEAR" OR distance = "IMMEDIATE"').limit(2)
+    active_users = User.order('distance ASC').where("distance = 'NEAR' OR distance = 'IMMEDIATE'").limit(2)
     return render json: [] if active_users.count < 1
     data = { users: active_users }
     twitter_1 = twitter_user(active_users[0])
@@ -40,7 +40,7 @@ class LocationController < ApplicationController
       twitter_2 = twitter_user(active_users[1])
       data[:mutual_following] = mutual_following(twitter_1, twitter_2)
     else
-      data[:news] = news_api.near_user(twitter_1.id)
+      data[:news] = news_api.near_user(twitter_1.id)[0..10]
     end
     render json: data, callback: params['callback']
   end

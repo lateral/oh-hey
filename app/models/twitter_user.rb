@@ -1,6 +1,6 @@
 # app/models/twitter_user.rb
 class TwitterUser < ActiveRecord::Base
-  has_many :tweets, dependent: :destroy
+  # has_many :tweets, dependent: :destroy
   belongs_to :user
 
   API = LateralRecommender::API.new ENV['API_KEY']
@@ -17,19 +17,21 @@ class TwitterUser < ActiveRecord::Base
     API.add_user(id)
     tweets = meaningful_tweets(users_tweets)
     tweets.each { |tweet| Tweet.create_from_tweet tweet, self }
-    # save_following
+    save_following
+  end
+
+  def save_following
+    friends = TW_CLIENT.friends(twitter_username, skip_status: true, include_user_entities: false).to_a
+    results = []
+    friends.each do |follower|
+      results << { id: follower.id, image: follower.profile_image_url.to_s.gsub('_normal', ''),
+                   name: follower.name, screen_name: follower.screen_name, description: follower.description }
+    end
+    self.following = results
+    save!
   end
 
   # private
-
-  def save_following
-    list = TW_CLIENT.friends(twitter_username, skip_status: true, include_user_entities: false)
-    list = list.map do |follower|
-      { id: follower.id, image: follower.profile_image_url.to_s.gsub('_normal', ''),
-        name: follower.name, screen_name: follower.screen_name, description: follower.description }
-    end
-    update_column('following', list)
-  end
 
   def meaningful_tweets(tweets)
     # Get tweets with links in
