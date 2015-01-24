@@ -17,6 +17,14 @@ gem 'resque'
 gem 'resque-loner'
 gem 'resque-scheduler'
 
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'bullet'
+  gem 'launchy'
+  gem 'jazz_hands'
+end
+
 gem 'rspec-rails', groups: [:development, :test]
 
 group :development, :test do

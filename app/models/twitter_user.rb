@@ -1,23 +1,25 @@
 # app/models/twitter_user.rb
 class TwitterUser < ActiveRecord::Base
   has_many :tweets, dependent: :destroy
+  belongs_to :user
 
-  API = LateralRecommender::API.new ENV['LATERAL_NEWS_KEY']
+  API = LateralRecommender::API.new ENV['API_KEY']
 
   def update
+    API.add_user(id)
     last_tweet = Tweet.where(twitter_user: self).order('tweeted_at ASC').last
+    last_tweet = { twitter_id: 100 } if last_tweet.nil?
     tweets = meaningful_tweets(users_tweets(since_id: last_tweet[:twitter_id]))
     tweets.each { |tweet| Tweet.create_from_tweet tweet, self }
   end
 
-  def add(bot_id = false)
-    add_user = API.add_user(id)
-    return false if add_user.key?(:error)
+  def add
+    API.add_user(id)
     tweets = meaningful_tweets(users_tweets)
     tweets.each { |tweet| Tweet.create_from_tweet tweet, self }
   end
 
-  private
+  # private
 
   def meaningful_tweets(tweets)
     # Get tweets with links in
@@ -28,7 +30,6 @@ class TwitterUser < ActiveRecord::Base
 
     # Pass to MultiUrlBoilerpipe to fetch them in parallel
     bodies = batch_article_bodies(urls_to_fetch)
-
     # Loop through each tweet in parallel to check with the API
     check_articles_with_api(tweets, bodies)
   end
@@ -38,15 +39,16 @@ class TwitterUser < ActiveRecord::Base
     Parallel.map(tweets, in_threads: threads) do |tweet|
       # If the tweet already has a :doc key then it's cached
       if tweet.key? :doc
-        API.add_user_document(id, tweet[:id], tweet[:doc][:body], created_at: tweet[:created_at])
-        tweet
+        response = API.add_user_document(id, tweet[:id], tweet[:doc][:body], created_at: tweet[:created_at])
+        response
+        # tweet
       else
         # Create a temporary document object and send the body to the API
         tweet[:doc] = { url: tweet[:urls].first, body: bodies[tweet[:urls].first] }
         response = API.add_user_document(id, tweet[:id], tweet[:doc][:body], created_at: tweet[:created_at])
-
         # Return the tweet if the API response is valid
-        tweet unless response.key?(:error)
+        response
+        # tweet unless response.key?(:error)
       end
     end.reject(&:blank?)
   end

@@ -8,7 +8,7 @@ class Tweet < ActiveRecord::Base
       tweet[:doc] = TweetDocument.find_or_initialize_by tweet[:doc]
     end
     t = Tweet.find_or_initialize_by twitter_id: tweet[:id].to_s, text: tweet[:text],
-                                    url: tweet[:url], tweeted_at: tweet[:created_at],
+                                    url: tweet[:urls].first.to_s, tweeted_at: tweet[:created_at],
                                     tweet_document: tweet[:doc], twitter_user: user
     t.save
     user.status = 'active'
