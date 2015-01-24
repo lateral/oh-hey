@@ -39,6 +39,7 @@ class LocationController < ApplicationController
     if active_users.length == 2
       twitter_2 = twitter_user(active_users[1])
       data[:mutual_following] = mutual_following(twitter_1, twitter_2)
+      data[:news] = news_api.near_user(twitter_1.id)[0..10]
     else
       data[:news] = news_api.near_user(twitter_1.id)[0..10]
     end
