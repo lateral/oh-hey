@@ -60,6 +60,7 @@ class LocationController < ApplicationController
   end
 
   def mutual_following(a, b)
+    return [] unless a.following
     a.following.each_with_object([]) do |user_a, arr|
       match = b.following.detect { |user_b| user_b['id'] == user_a['id'] }
       arr << match if match
