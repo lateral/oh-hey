@@ -7,6 +7,8 @@ class LocationController < ApplicationController
     check_twitter
     check_github
     @user.distance = params[:distance]
+    @user.major = params[:major]
+    @user.minor = params[:minor]
     render json: { success: @user.save }
   end
 
@@ -31,7 +33,7 @@ class LocationController < ApplicationController
   def data
     news_api = LateralRecommender::API.new ENV['API_KEY'], 'news'
     active_users = User.order('distance ASC').where('distance < 10.0').limit(2)
-    return render json: [] unless active_users
+    return render json: [] if active_users.count < 1
     data = { users: active_users }
     twitter_1 = twitter_user(active_users[0])
     if active_users.length == 2
