@@ -113,7 +113,7 @@ class LocationController < ApplicationController
     return if @user.twitter && @user.twitter == params[:twitter]
     # @user.twitter_json = twitter_self(params[:twitter])
     @user.twitter = params[:twitter]
-    # @user.save
+    @user.save
   end
 
   def check_github
@@ -121,6 +121,6 @@ class LocationController < ApplicationController
     return if @user.github && @user.github == params[:github]
     @user.github_json = github_self(params[:github])
     @user.github = params[:github]
-    # @user.save
+    @user.save
   end
 end
