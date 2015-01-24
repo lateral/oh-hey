@@ -31,6 +31,7 @@ class LocationController < ApplicationController
   def data
     news_api = LateralRecommender::API.new ENV['API_KEY'], 'news'
     active_users = User.order('distance ASC').where('distance < 10.0').limit(2)
+    return render json: [] unless active_users
     data = { users: active_users }
     twitter_1 = twitter_user(active_users[0])
     if active_users.length == 2
