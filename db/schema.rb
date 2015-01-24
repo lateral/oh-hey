@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150124181933) do
+ActiveRecord::Schema.define(version: 20150124213914) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,8 @@ ActiveRecord::Schema.define(version: 20150124181933) do
     t.string "major"
     t.string "minor"
     t.string "distance"
+    t.json   "github_json"
+    t.json   "twitter_json"
   end
 
 end

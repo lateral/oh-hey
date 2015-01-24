@@ -1,6 +1,10 @@
 class LocationController < ApplicationController
   skip_before_filter :verify_authenticity_token
   include ApplicationHelper
+  include ActionView::Helpers::TextHelper
+  include ActionView::Helpers::SanitizeHelper
+
+  NEWS_API = LateralRecommender::API.new ENV['API_KEY'], 'news'
 
   def add
     @user = User.where(remote_id: params[:user_id]).first_or_create
@@ -15,33 +19,22 @@ class LocationController < ApplicationController
   def test
     user_a = User.find(1)
     user_b = User.find(2)
-    stars_a = github_info(Octokit.starred(user_a.github))
-    subs_a = github_info(Octokit.subscriptions(user_a.github))
-    stars_b = github_info(Octokit.starred(user_b.github))
-    subs_b = github_info(Octokit.subscriptions(user_b.github))
-
-    stats_a = stars_a.concat(subs_a)
-    stats_b = stars_b.concat(subs_b)
-    union = stats_a.each_with_object([]) do |repo_a, arr|
-      match = stats_b.detect { |repo_b| repo_b['title'] == repo_a['title'] }
-      arr << match if match
-    end
     render json: { repos: union }#.to_hash, b: b.to_hash }
   end
 
   # What display on Twitter when not two people?
   def data
-    news_api = LateralRecommender::API.new ENV['API_KEY'], 'news'
     active_users = User.order('distance ASC').where("distance = 'NEAR' OR distance = 'IMMEDIATE'").limit(2)
     return render json: [] if active_users.count < 1
     data = { users: active_users }
     twitter_1 = twitter_user(active_users[0])
     if active_users.length == 2
       twitter_2 = twitter_user(active_users[1])
+      data[:mutual_github] = mutual_github(active_users[0], active_users[1])
       data[:mutual_following] = mutual_following(twitter_1, twitter_2)
-      data[:news] = news_api.near_user(twitter_1.id)[0..10]
+      data[:news] = mutual_news(twitter_1, twitter_2)
     else
-      data[:news] = news_api.near_user(twitter_1.id)[0..10]
+      data[:news] = news(twitter_1.id)
     end
     render json: data, callback: params['callback']
   end
@@ -50,9 +43,41 @@ class LocationController < ApplicationController
 
   def github_info(data)
     data.map do |item|
-      { title: item[:full_name], description: item[:description],
+      { id: item[:document_id], title: item[:full_name], description: item[:description],
         language: item[:language], stars: item[:stargazers_count],
         updated: item[:updated_at] }
+    end
+  end
+
+  def mutual_github(a, b)
+    stars_a = github_info(Octokit.starred(a.github))
+    subs_a = github_info(Octokit.subscriptions(a.github))
+    stars_b = github_info(Octokit.starred(b.github))
+    subs_b = github_info(Octokit.subscriptions(b.github))
+    stats_a = stars_a.concat(subs_a)
+    stats_b = stars_b.concat(subs_b)
+    # union =
+    stats_a.each_with_object([]) do |repo_a, arr|
+      match = stats_b.detect { |repo_b| repo_b['title'] == repo_a['title'] }
+      arr << match if match
+    end
+  end
+
+  def mutual_news(a, b)
+    news_1 = news(a.id)
+    news_2 = news(b.id)
+    news_1.concat(news_2).uniq { |result| result[:id] }.sort { |a, b| a[:distance].to_f <=> b[:distance].to_f }[0..5]
+  end
+
+  def news(user_id)
+    results = NEWS_API.near_user user_id
+    results.reject! { |item| item['summary'].blank? }[0..5]
+    results.map do |result|
+      summary = truncate(CGI.unescapeHTML(strip_tags(result['summary'])), length: 150, separator: ' ')
+      published = DateTime.parse result['published']
+      published = published.strftime '%d %^b at %H:%M'
+      { id: result['document_id'], title: result['title'], summary: summary, distance: result['distance'],
+        published: published, source: result['source_name'], source_slug: result['source_slug'] }
     end
   end
 
@@ -60,25 +85,42 @@ class LocationController < ApplicationController
     TwitterUser.find_by(twitter_username: user.twitter)
   end
 
+  def twitter_self(username)
+    user = TW_CLIENT.user(username)
+    { id: user.id, photo: user.profile_image_url.to_s, description: user.description,
+      name: user.name, username: user.screen_name,
+      followers: user.followers_count }
+  end
+
+  def github_self(username)
+    user = Octokit.user(username)
+    { name: user.name, username: user.login, photo: user.avatar_url,
+      joined: user.created_at }
+  end
+
   def mutual_following(a, b)
     return [] unless a.following && b.following
-    a.following.each_with_object([]) do |user_a, arr|
-      match = b.following.detect { |user_b| user_b['id'] == user_a['id'] }
-      arr << match if match
+    users = TW_CLIENT.users(a.following & b.following, include_entities: false)
+    users.map do |user|
+      { id: user.id, photo: user.profile_image_url.to_s,
+        name: user.name, username: user.screen_name,
+        followers: user.followers_count }
     end
   end
 
   def check_twitter
     return unless params[:twitter]
     return if @user.twitter && @user.twitter == params[:twitter]
+    # @user.twitter_json = twitter_self(params[:twitter])
     @user.twitter = params[:twitter]
-    @user.save
+    # @user.save
   end
 
   def check_github
     return unless params[:github]
     return if @user.github && @user.github == params[:github]
+    @user.github_json = github_self(params[:github])
     @user.github = params[:github]
-    @user.save
+    # @user.save
   end
 end
