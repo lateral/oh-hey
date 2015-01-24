@@ -5,6 +5,7 @@ class LocationController < ApplicationController
   include ActionView::Helpers::SanitizeHelper
 
   NEWS_API = LateralRecommender::API.new ENV['API_KEY'], 'news'
+  GITHUB = Octokit::Client.new(login: 'ohheyseedhack', password: ENV['GITHUB_PASS'])
 
   def add
     @user = User.where(remote_id: params[:user_id]).first_or_create
@@ -50,10 +51,10 @@ class LocationController < ApplicationController
   end
 
   def mutual_github(a, b)
-    stars_a = github_info(Octokit.starred(a.github))
-    subs_a = github_info(Octokit.subscriptions(a.github))
-    stars_b = github_info(Octokit.starred(b.github))
-    subs_b = github_info(Octokit.subscriptions(b.github))
+    stars_a = github_info(GITHUB.starred(a.github))
+    subs_a = github_info(GITHUB.subscriptions(a.github))
+    stars_b = github_info(GITHUB.starred(b.github))
+    subs_b = github_info(GITHUB.subscriptions(b.github))
     stats_a = stars_a.concat(subs_a)
     stats_b = stars_b.concat(subs_b)
     # union =
@@ -93,7 +94,7 @@ class LocationController < ApplicationController
   end
 
   def github_self(username)
-    user = Octokit.user(username)
+    user = GITHUB.user(username)
     { name: user.name, username: user.login, photo: user.avatar_url,
       joined: user.created_at }
   end
