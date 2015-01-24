@@ -32,7 +32,7 @@ class LocationController < ApplicationController
   # What display on Twitter when not two people?
   def data
     news_api = LateralRecommender::API.new ENV['API_KEY'], 'news'
-    active_users = User.order('distance ASC').where('distance < 10.0').limit(2)
+    active_users = User.order('distance ASC').where('distance = "NEAR" OR distance = "IMMEDIATE"').limit(2)
     return render json: [] if active_users.count < 1
     data = { users: active_users }
     twitter_1 = twitter_user(active_users[0])
