@@ -16,6 +16,7 @@ gem 'twitter'
 gem 'resque'
 gem 'resque-loner'
 gem 'resque-scheduler'
+gem 'octokit'
 
 group :development do
   gem 'better_errors'
@@ -27,7 +28,7 @@ end
 
 gem 'rspec-rails', groups: [:development, :test]
 
-group :development, :test do
+group :test do
   gem 'web-console'
   gem 'capybara'
   gem 'database_cleaner'
