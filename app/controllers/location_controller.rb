@@ -6,7 +6,7 @@ class LocationController < ApplicationController
     @user = User.where(remote_id: params[:user_id]).first_or_create
     check_twitter
     check_github
-    @user.distance = params[:distance]
+    @user.distance = params[:proximity]
     @user.major = params[:major]
     @user.minor = params[:minor]
     render json: { success: @user.save }
