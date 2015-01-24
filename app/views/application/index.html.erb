@@ -1,1 +1,44 @@
-oh hey
+<div class="container">
+    <header class="header">
+        <%= image_tag "logo.png" %>
+        <%= image_tag "ohheylogo.png", class: "logo" %>
+    </header>
+    <section class="content">
+        <div class="twitter column">
+            <div class="header">Twitter</div>
+            <div class="cards">
+            	
+            	<div class="card">
+            		<div class="header">
+            			This is a header
+            		</div>
+            		<div class="body">
+            			This is a card
+            		</div>
+            	</div>
+            </div>
+        </div>
+        <div class="github column">
+        	<div class="header">Github</div>
+            <div class="cards"></div>
+        </div>
+        <div class="events column">
+        	<div class="header">Events</div>
+            <div class="cards"></div>
+        </div>
+        <div class="news column">
+        	<div class="header">News</div>
+            <div class="cards"></div>
+        </div>
+    </section>
+</div>
+<script type="text/template" id="news-item">
+	<div class="card">
+		<div class="header">
+			{{=title}}
+		</div>
+		<div class="body">
+			This is a card
+		</div>
+	</div>
+</script>

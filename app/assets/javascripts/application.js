@@ -14,3 +14,31 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(document).ready( function () {
+
+	// $(".call").bind("click", function () {
+		// $.ajax({
+		//   url: "http://oh-hey.elasticbeanstalk.com/data.json",
+		//   beforeSend: function( xhr ) {
+		//   	console.log('sending');
+		//   }
+		// }).done(function( data ) {
+		//   console.log(data);
+		// });
+
+	_.templateSettings = {
+		interpolate: /\{\{\=(.+?)\}\}/g,
+		evaluate: /\{\{(.+?)\}\}/g
+	};
+
+	var newsTemplate = _.template($("#news-item").html());
+
+	$.getJSON("http://oh-hey.elasticbeanstalk.com/data.json?callback=?", function ( data) {
+		console.log(data);
+		$(data.news).each(function(k,v){
+			var el = newsTemplate({ title: v.title });
+			$(".news .cards").append(el);
+		});
+	});
+	// });
+});
