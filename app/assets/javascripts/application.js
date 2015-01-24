@@ -14,17 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$(document).ready( function () {
 
-	// $(".call").bind("click", function () {
-		// $.ajax({
-		//   url: "http://oh-hey.elasticbeanstalk.com/data.json",
-		//   beforeSend: function( xhr ) {
-		//   	console.log('sending');
-		//   }
-		// }).done(function( data ) {
-		//   console.log(data);
-		// });
+$(document).ready( function () {
 
 	_.templateSettings = {
 		interpolate: /\{\{\=(.+?)\}\}/g,
@@ -33,12 +24,39 @@ $(document).ready( function () {
 
 	var newsTemplate = _.template($("#news-item").html());
 
-	$.getJSON("http://oh-hey.elasticbeanstalk.com/data.json?callback=?", function ( data) {
-		console.log(data);
-		$(data.news).each(function(k,v){
-			var el = newsTemplate({ title: v.title });
-			$(".news .cards").append(el);
-		});
-	});
-	// });
+	function getData() {
+		$.getJSON("http://oh-hey.elasticbeanstalk.com/data.json?callback=?", function ( data ) {
+			console.log(data);
+			if (data != null) {
+				if (data.users != null) {
+					$('.users').empty();
+					$(data.users).each(function(k,v) {
+						$('.users').append("<div class='user'>"+v.github + "</div>");
+					});
+				}
+				
+				if (data.news && data.news.length > 0) {
+					$('.news > .data').text(data.news.length + " News Items");
+					$('.news .cards').empty();
+					$(data.news).each(function(k,v){
+						var el = newsTemplate({ 
+							title: v.title,
+							summary: v.summary 
+						});
+						$(".news .cards").append(el);
+						if (data.news.length > 0) {
+							$('.news.column').addClass('show');
+						}
+					});
+				} else {
+					$('.news.column').removeClass('show');
+				}
+			}
+		})
+			.always(function() {
+	    		setTimeout(function(){getData();}, 3000);
+	  		});
+	}
+
+	getData();
 });
