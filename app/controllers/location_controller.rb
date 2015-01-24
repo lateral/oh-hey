@@ -35,7 +35,7 @@ class LocationController < ApplicationController
       data[:mutual_following] = mutual_following(twitter_1, twitter_2)
       data[:news] = mutual_news(twitter_1, twitter_2)
     else
-      data[:news] = news(twitter_1.id)
+      data[:news] = news(twitter_1.id)[0..4]
     end
     render json: data, callback: params['callback']
   end
@@ -67,7 +67,7 @@ class LocationController < ApplicationController
   def mutual_news(a, b)
     news_1 = news(a.id)
     news_2 = news(b.id)
-    news_1.concat(news_2).uniq { |result| result[:id] }.sort { |a, b| a[:distance].to_f <=> b[:distance].to_f }[0..5]
+    news_1.concat(news_2).uniq { |result| result[:id] }.sort { |a, b| a[:distance].to_f <=> b[:distance].to_f }[0..4]
   end
 
   def news(user_id)
@@ -112,7 +112,7 @@ class LocationController < ApplicationController
   def check_twitter
     return unless params[:twitter]
     return if @user.twitter && @user.twitter == params[:twitter]
-    # @user.twitter_json = twitter_self(params[:twitter])
+    @user.twitter_json = twitter_self(params[:twitter])
     @user.twitter = params[:twitter]
     @user.save
   end
