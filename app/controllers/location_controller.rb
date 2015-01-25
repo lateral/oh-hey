@@ -76,7 +76,7 @@ class LocationController < ApplicationController
 
   def mutual_events(a, b)
     events(a).concat(events(b))
-             .uniq { |result| result['id'] }
+             .uniq { |result| result['title'] }
              .sort { |a, b| a['distance'].to_f <=> b['distance'].to_f }
   end
 
