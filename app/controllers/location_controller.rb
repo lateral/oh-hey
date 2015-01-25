@@ -29,8 +29,10 @@ class LocationController < ApplicationController
       data[:mutual_github] = mutual_github(active_users[0].github_favs, active_users[1].github_favs)
       data[:mutual_following] = mutual_following(twitter_1, twitter_2)
       data[:news] = mutual_news(twitter_1, twitter_2)
+      data[:events] = mutual_events(twitter_1, twitter_2)[0..4]
     else
       data[:news] = news(twitter_1)[0..4]
+      data[:events] = events(twitter_1)[0..4]
     end
     render json: data, callback: params['callback']
   end
@@ -51,11 +53,11 @@ class LocationController < ApplicationController
            .sort { |a, b| a[:distance].to_f <=> b[:distance].to_f }[0..4]
   end
 
-  def news(results)
-    if results.results_cache
-      results = results.results_cache
+  def news(user)
+    if user.results_cache
+      results = user.results_cache
     else
-      results = NEWS_API.near_user(id)
+      results = NEWS_API.near_user(user.id)
     end
     results.reject! { |item| item['summary'].blank? }[0..5]
     results.map do |result|
@@ -65,6 +67,26 @@ class LocationController < ApplicationController
       { id: result['document_id'], title: result['title'], summary: summary, distance: result['distance'],
         published: published, source: result['source_name'], source_slug: result['source_slug'] }
     end
+  end
+
+  def mutual_events(a, b)
+    events(a).concat(events(b))
+             .uniq { |result| result['id'] }
+             .sort { |a, b| a['distance'].to_f <=> b['distance'].to_f }
+  end
+
+  def events(user)
+    api = LateralRecommender::API.new ENV['API_KEY']
+    results = api.near_user(user.id)
+    ids = results.map { |i| i['document_id'] }
+    api.match_documents(results, Event.where(str_id: ids), 'str_id').map { |m| format_event(m) }
+  end
+
+  def format_event(event)
+    time = event['time'].gsub(event['date'].to_s, '').gsub('00:00', '00').gsub('30:00', '30')
+    date = event['date'].strftime("%^a %d %^b, #{time}")
+    { 'id' => event['str_id'], 'title' => event['event'],
+      'description' => event['description'], 'date' => date, 'distance' => event['distance'] }
   end
 
   def twitter_user(user)
@@ -80,10 +102,8 @@ class LocationController < ApplicationController
 
   def github_self(username)
     user = GITHUB.user(username)
-    created = DateTime.parse user.created_at
-    created = created.strftime '%d %^b %Y'
     { id: user.id, name: user.name, username: user.login, photo: user.avatar_url,
-      joined: user.created_at }
+      joined: user.created_at.strftime('%d %^b %Y') }
   end
 
   def github_favs(username)
