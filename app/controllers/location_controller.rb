@@ -23,7 +23,7 @@ class LocationController < ApplicationController
 
   # What display on Twitter when not two people?
   def data
-    time = Rails.env.development? ? 2.days.ago : 10.seconds.ago
+    time = Rails.env.development? ? 2.days.ago : 5.seconds.ago
     active_users = User.order('distance ASC').where("last_near > ?", time).limit(2)
 
     return render json: [], callback: params['callback'] if active_users.count < 1
