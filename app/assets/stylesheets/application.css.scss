@@ -200,28 +200,30 @@ header {
 }
 
 .twitter .card-half:nth-child(2n) {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
+$tw-width: 120px;
 .twitter .card-half {
   display: inline-block;
   margin-bottom: 30px;
+  width: $tw-width;
   .top {
     display: block;
-    width: 168px;
-    height: 168px;
+    width: $tw-width;
+    height: $tw-width;
     position: relative;
     background-color: rgba(255, 255, 255, .7);
     img {
       position: absolute;
-      width: 168px;
-      height: 168px;
+      width: $tw-width;
+      height: $tw-width;
       opacity: .7;
       z-index: 5;
     }
     .name {
       position: absolute;
-      font-size: 24px;
+      font-size: 18px;
       color: #fff;
       bottom: 10px;
       left: 10px;
@@ -230,17 +232,17 @@ header {
   }
 
   .bottom {
-    width: 168px;
+    width: $tw-width;
     padding-top: 10px;
     padding-bottom: 10px;
     // padding: 15px 20px 20px 20px;
     background-color: #fff;
     color: #000;
-    font-size: 14px;
+    font-size: 12px;
 
     .handle, .followers {
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
     .followers {
@@ -252,7 +254,7 @@ header {
     }
 
     .handle {
-      font-size: 14px;
+      font-size: 12px;
       color: #53A8E9;
       line-height: 24px;
     }
