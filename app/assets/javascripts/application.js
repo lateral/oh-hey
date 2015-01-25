@@ -158,7 +158,7 @@ $(document).ready( function () {
         }
       }
     }).always(function() {
-      // setTimeout(function(){getData();}, 3000);
+      setTimeout(function(){getData();}, 3000);
     });
   }
 
