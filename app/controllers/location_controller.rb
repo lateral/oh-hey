@@ -12,15 +12,19 @@ class LocationController < ApplicationController
     @user = User.where(remote_id: params[:user_id]).first_or_create
     check_twitter
     check_github
-    @user.distance = params[:proximity]
-    @user.major = params[:major]
-    @user.minor = params[:minor]
+    if params[:proximity] == 'NEAR' || params[:proximity] == 'IMMEDIATE'
+      @user.distance = params[:proximity]
+      @user.major = params[:major]
+      @user.minor = params[:minor]
+      @user.last_near = Time.now
+    end
     render json: { success: @user.save }
   end
 
   # What display on Twitter when not two people?
   def data
-    active_users = User.order('distance ASC').where("distance = 'NEAR' OR distance = 'IMMEDIATE'").limit(2)
+    time = Rails.env.development? ? 2.days.ago : 10.seconds.ago
+    active_users = User.order('distance ASC').where("last_near > ?", time).limit(2)
     return render json: [], callback: params['callback'] if active_users.count < 1
     data = { users: active_users.as_json.map { |u| u.except('github_favs') } }
     twitter_1 = twitter_user(active_users[0])
