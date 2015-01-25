@@ -1,4 +1,4 @@
-require 'resque/scheduler/tasks'
+# require 'resque/scheduler/tasks'
 require 'fileutils'
 
 # Make pids directory if doesn't exist
@@ -18,25 +18,25 @@ def run_worker(queue, count = 1)
 end
 
 # Start a scheduler, requires resque_scheduler >= 2.0.0.f
-def run_scheduler
-  puts 'Starting resque scheduler'
-  env_vars = {
-    'BACKGROUND' => '1',
-    'PIDFILE' => (Rails.root + 'tmp/pids/resque_scheduler.pid').to_s,
-    'VERBOSE' => '1'
-  }
-  ops = { pgroup: true, err: [(Rails.root + 'log/scheduler_error.log').to_s, 'a'],
-          out: [(Rails.root + 'log/scheduler.log').to_s, 'a'] }
-  pid = spawn(env_vars, 'rake resque:scheduler', ops)
-  Process.detach(pid)
-end
+# def run_scheduler
+#   puts 'Starting resque scheduler'
+#   env_vars = {
+#     'BACKGROUND' => '1',
+#     'PIDFILE' => (Rails.root + 'tmp/pids/resque_scheduler.pid').to_s,
+#     'VERBOSE' => '1'
+#   }
+#   ops = { pgroup: true, err: [(Rails.root + 'log/scheduler_error.log').to_s, 'a'],
+#           out: [(Rails.root + 'log/scheduler.log').to_s, 'a'] }
+#   pid = spawn(env_vars, 'rake resque:scheduler', ops)
+#   Process.detach(pid)
+# end
 
 namespace :resque do
   task setup: :environment do
     require 'resque'
-    require 'resque-scheduler'
+    # require 'resque-scheduler'
     Resque.redis = 'localhost:6379'
-    Resque.schedule = YAML.load_file(File.join(Rails.root, 'config/resque_scheduler.yml'))
+    # Resque.schedule = YAML.load_file(File.join(Rails.root, 'config/resque_scheduler.yml'))
   end
 
   desc 'Restart running workers'
@@ -62,47 +62,45 @@ namespace :resque do
 
   desc 'Start workers'
   task start_workers: :environment do
-    run_worker('*', 2)
-    run_worker('user_mind_add', 2)
-    run_worker('user_mind_update', 1)
+    run_worker('*', 4)
   end
 
-  desc 'Restart scheduler'
-  task restart_scheduler: :environment do
-    Rake::Task['resque:stop_scheduler'].invoke
-    Rake::Task['resque:start_scheduler'].invoke
-  end
+  # desc 'Restart scheduler'
+  # task restart_scheduler: :environment do
+  #   Rake::Task['resque:stop_scheduler'].invoke
+  #   Rake::Task['resque:start_scheduler'].invoke
+  # end
 
-  desc 'Quit scheduler'
-  task stop_scheduler: :environment do
-    pidfile = Rails.root + 'tmp/pids/resque_scheduler.pid'
-    if !File.exist?(pidfile)
-      puts 'Scheduler not running'
-    else
-      pid = File.read(pidfile).to_i
-      syscmd = "kill -s QUIT #{pid}"
-      puts "Running syscmd: #{syscmd}"
-      system(syscmd)
-      FileUtils.rm_f(pidfile)
-    end
-  end
+  # desc 'Quit scheduler'
+  # task stop_scheduler: :environment do
+  #   pidfile = Rails.root + 'tmp/pids/resque_scheduler.pid'
+  #   if !File.exist?(pidfile)
+  #     puts 'Scheduler not running'
+  #   else
+  #     pid = File.read(pidfile).to_i
+  #     syscmd = "kill -s QUIT #{pid}"
+  #     puts "Running syscmd: #{syscmd}"
+  #     system(syscmd)
+  #     FileUtils.rm_f(pidfile)
+  #   end
+  # end
 
-  desc 'Start scheduler'
-  task start_scheduler: :environment do
-    run_scheduler
-  end
+  # desc 'Start scheduler'
+  # task start_scheduler: :environment do
+  #   run_scheduler
+  # end
 
-  desc 'Reload schedule'
-  task reload_schedule: :environment do
-    pidfile = Rails.root + 'tmp/pids/resque_scheduler.pid'
+  # desc 'Reload schedule'
+  # task reload_schedule: :environment do
+  #   pidfile = Rails.root + 'tmp/pids/resque_scheduler.pid'
 
-    if !File.exist?(pidfile)
-      puts 'Scheduler not running'
-    else
-      pid = File.read(pidfile).to_i
-      syscmd = "kill -s USR2 #{pid}"
-      puts "Running syscmd: #{syscmd}"
-      system(syscmd)
-    end
-  end
+  #   if !File.exist?(pidfile)
+  #     puts 'Scheduler not running'
+  #   else
+  #     pid = File.read(pidfile).to_i
+  #     syscmd = "kill -s USR2 #{pid}"
+  #     puts "Running syscmd: #{syscmd}"
+  #     system(syscmd)
+  #   end
+  # end
 end

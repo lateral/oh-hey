@@ -4,6 +4,7 @@ class TwitterUser < ActiveRecord::Base
   belongs_to :user
 
   API = LateralRecommender::API.new ENV['API_KEY']
+  NEWS_API = LateralRecommender::API.new ENV['API_KEY'], 'news'
 
   def update
     API.add_user(id)
@@ -18,16 +19,13 @@ class TwitterUser < ActiveRecord::Base
     tweets = meaningful_tweets(users_tweets)
     tweets.each { |tweet| Tweet.create_from_tweet tweet, self }
     save_following
+    self.results_cache = NEWS_API.near_user(id)
+    save!
   end
 
   def save_following
-    friends = TW_CLIENT.friends(twitter_username, skip_status: true, include_user_entities: false).to_a
-    results = []
-    friends.each do |follower|
-      results << { id: follower.id, image: follower.profile_image_url.to_s.gsub('_normal', ''),
-                   name: follower.name, screen_name: follower.screen_name, description: follower.description }
-    end
-    self.following = results
+    friends = TW_CLIENT.friend_ids(twitter_username, skip_status: true, include_user_entities: false).to_a
+    self.following = friends
     save!
   end
 
