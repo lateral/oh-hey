@@ -80,6 +80,8 @@ class LocationController < ApplicationController
 
   def github_self(username)
     user = GITHUB.user(username)
+    created = DateTime.parse user.created_at
+    created = created.strftime '%d %^b %Y'
     { id: user.id, name: user.name, username: user.login, photo: user.avatar_url,
       joined: user.created_at }
   end
