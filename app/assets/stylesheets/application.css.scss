@@ -18,7 +18,7 @@ html, body { height: 100%; margin: 0; padding: 0; }
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: url('background.png') no-repeat center center fixed;
+  background: asset-url('background.png') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -171,7 +171,7 @@ header {
 }
 
 .twitter > .header {
-  background: #55acee url('twitter.png') no-repeat;
+  background: #55acee asset-url('twitter.png') no-repeat;
   background-position: center right 10px;
 }
 
@@ -288,7 +288,7 @@ $tw-width: 120px;
 }
 
 .events > .header {
-  background: #D51C5B url('events.png') no-repeat;
+  background: #D51C5B asset-url('events.png') no-repeat;
   background-position: center right 10px;
 }
 
@@ -310,7 +310,7 @@ $tw-width: 120px;
 }
 
 .events .cards .card:first-child .header {
-  background-image: url('events-placeholder.jpg');
+  background-image: asset-url('events-placeholder.jpg');
   background-size:100% auto;
   padding-top:50px;
 }
@@ -321,7 +321,7 @@ $tw-width: 120px;
 }
 
 .news > .header {
-  background: #44DAA9 url('news.png') no-repeat;
+  background: #44DAA9 asset-url('news.png') no-repeat;
   background-position: center right 10px;
 }
 
