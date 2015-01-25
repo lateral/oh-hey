@@ -52,7 +52,11 @@ class LocationController < ApplicationController
   end
 
   def news(results)
-    results = results.results_cache
+    if results.results_cache
+      results = results.results_cache
+    else
+      results = NEWS_API.near_user(id)
+    end
     results.reject! { |item| item['summary'].blank? }[0..5]
     results.map do |result|
       summary = truncate(CGI.unescapeHTML(strip_tags(result['summary'])), length: 150, separator: ' ')
