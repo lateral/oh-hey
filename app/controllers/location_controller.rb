@@ -25,6 +25,7 @@ class LocationController < ApplicationController
   def data
     time = Rails.env.development? ? 2.days.ago : 10.seconds.ago
     active_users = User.order('distance ASC').where("last_near > ?", time).limit(2)
+
     return render json: [], callback: params['callback'] if active_users.count < 1
     data = { users: active_users.as_json.map { |u| u.except('github_favs') } }
     twitter_1 = twitter_user(active_users[0])
@@ -98,10 +99,10 @@ class LocationController < ApplicationController
   end
 
   def twitter_self(username)
-    user = TW_CLIENT.user(username)
-    { id: user.id, photo: user.profile_image_url.to_s, description: user.description,
-      name: user.name, username: user.screen_name,
-      followers: user.followers_count }
+    user = TW_CLIENT.user(username).as_json
+    { id: user['id'], photo: user['profile_image_url'].to_s, description: user['description'],
+      name: user['name'], username: user['screen_name'],
+      followers: user['followers_count'] }
   end
 
   def github_self(username)
@@ -137,7 +138,7 @@ class LocationController < ApplicationController
   def check_twitter
     return unless params[:twitter]
     return if @user.twitter && @user.twitter == params[:twitter]
-    # @user.twitter_json = twitter_self(params[:twitter])
+    @user.twitter_json = twitter_self(params[:twitter])
     @user.twitter = params[:twitter]
     @user.save
   end
