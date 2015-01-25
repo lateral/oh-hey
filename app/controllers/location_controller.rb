@@ -1,3 +1,5 @@
+require 'active_support/core_ext/hash'
+
 class LocationController < ApplicationController
   skip_before_filter :verify_authenticity_token
   include ApplicationHelper
@@ -17,21 +19,15 @@ class LocationController < ApplicationController
     render json: { success: @user.save }
   end
 
-  def test
-    user_a = User.find(1)
-    user_b = User.find(2)
-    render json: { repos: union }#.to_hash, b: b.to_hash }
-  end
-
   # What display on Twitter when not two people?
   def data
     active_users = User.order('distance ASC').where("distance = 'NEAR' OR distance = 'IMMEDIATE'").limit(2)
     return render json: [], callback: params['callback'] if active_users.count < 1
-    data = { users: active_users }
+    data = { users: active_users.as_json.map { |u| u.except('github_favs') } }
     twitter_1 = twitter_user(active_users[0])
     if active_users.length == 2
       twitter_2 = twitter_user(active_users[1])
-      data[:mutual_github] = mutual_github(active_users[0], active_users[1])
+      data[:mutual_github] = mutual_github(active_users[0].github_favs, active_users[1].github_favs)
       data[:mutual_following] = mutual_following(twitter_1, twitter_2)
       data[:news] = mutual_news(twitter_1, twitter_2)
     else
@@ -42,23 +38,10 @@ class LocationController < ApplicationController
 
   private
 
-  def github_info(data)
-    data.map do |item|
-      { id: item[:id], title: item[:full_name], description: item[:description],
-        language: item[:language], stars: item[:stargazers_count],
-        updated: item[:updated_at] }
-    end
-  end
-
   def mutual_github(a, b)
-    stars_a = github_info(GITHUB.starred(a.github))
-    subs_a = github_info(GITHUB.subscriptions(a.github))
-    stars_b = github_info(GITHUB.starred(b.github))
-    subs_b = github_info(GITHUB.subscriptions(b.github))
-    stats_a = stars_a.concat(subs_a)
-    stats_b = stars_b.concat(subs_b)
-    stats_a.each_with_object([]) do |repo_a, arr|
-      match = stats_b.detect { |repo_b| repo_b[:id] == repo_a[:id] }
+    return unless a && b
+    a.each_with_object([]) do |repo_a, arr|
+      match = b.detect { |repo_b| repo_b['id'] == repo_a['id'] }
       arr << match if match
     end
   end
@@ -94,8 +77,22 @@ class LocationController < ApplicationController
 
   def github_self(username)
     user = GITHUB.user(username)
-    { id: id, name: user.name, username: user.login, photo: user.avatar_url,
+    { id: user.id, name: user.name, username: user.login, photo: user.avatar_url,
       joined: user.created_at }
+  end
+
+  def github_favs(username)
+    stars = github_info(GITHUB.starred(username))
+    subs = github_info(GITHUB.subscriptions(username))
+    stars.concat(subs)
+  end
+
+  def github_info(data)
+    data.map do |item|
+      { id: item[:id], title: item[:full_name], description: item[:description],
+        language: item[:language], stars: item[:stargazers_count],
+        updated: item[:updated_at] }
+    end
   end
 
   def mutual_following(a, b)
@@ -120,6 +117,7 @@ class LocationController < ApplicationController
     return unless params[:github]
     return if @user.github && @user.github == params[:github]
     @user.github_json = github_self(params[:github])
+    @user.github_favs = github_favs(params[:github])
     @user.github = params[:github]
     @user.save
   end
