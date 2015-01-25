@@ -49,7 +49,7 @@ class LocationController < ApplicationController
     a.each_with_object([]) do |repo_a, arr|
       match = b.detect { |repo_b| repo_b['id'] == repo_a['id'] }
       arr << match if match
-    end
+    end.uniq { |result| result['id'] }
   end
 
   def mutual_news(a, b)
@@ -121,7 +121,7 @@ class LocationController < ApplicationController
     data.map do |item|
       { id: item[:id], title: item[:full_name], description: item[:description],
         language: item[:language], stars: item[:stargazers_count],
-        updated: item[:updated_at] }
+        updated: item[:updated_at].strftime('%d %^b at %H:%M') }
     end
   end
 
