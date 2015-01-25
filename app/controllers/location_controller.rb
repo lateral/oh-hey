@@ -90,7 +90,8 @@ class LocationController < ApplicationController
   def format_event(event)
     time = event['time'].gsub(event['date'].to_s, '').gsub('00:00', '00').gsub('30:00', '30')
     date = event['date'].strftime("%^a %d %^b, #{time}")
-    { 'id' => event['str_id'], 'title' => event['event'],
+    return event
+    { 'id' => event['str_id'], 'title' => event['event'], 'location' => event['location'],
       'description' => event['description'], 'date' => date, 'distance' => event['distance'] }
   end
 
