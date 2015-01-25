@@ -95,9 +95,26 @@ header {
 	opacity: 0;
 }
 
-.column.show {
+.column.show, .more.show {
 	opacity: 1;
 	transform: rotateY( 0deg );
+}
+
+.more {
+	transition: all 500ms;
+	-webkit-transition: all 500ms;
+
+	perspective: 2000px;
+	transform-style: preserve-3d;
+
+	-webkit-transform-origin: 100% 0%;
+
+	transform: rotateY( -90deg );
+	opacity: 0;
+}
+
+.more .data {
+	margin-bottom: 30px;
 }
 
 .content { 
@@ -107,7 +124,7 @@ header {
 	bottom:100px;
 }
 
-.column > .header, .column > .data {
+.column > .header, .column .data {
 	color: white;
 	padding: 10px;
 	float: right;
@@ -116,6 +133,20 @@ header {
 
 .column > .data {
 	margin-top: 10px;
+}
+
+.card > .header {
+	color: white;
+	font-size: 24px;
+	border-radius: 3px 3px 0 0;
+	padding: 10px;
+}
+
+.card > .body {
+	border-radius: 0 0 3px 3px;
+	padding: 10px;
+	color: black;
+	background: white;
 }
 
 .twitter {
@@ -132,6 +163,10 @@ header {
 	background: #55acee;
 }
 
+.twitter .card > .header {
+
+}
+
 .github {
 	color: white;
 	left:25%;
@@ -143,9 +178,14 @@ header {
 	background-position: center right 10px;
 }
 
-.github > .data {
+.github .data {
 	color: black;
 	background: white;
+}
+
+.github .card > .header {
+	color: black;
+	background: rgba(255,255,255,0.7);
 }
 
 .events {
@@ -168,7 +208,7 @@ header {
 }
 
 .news > .header {
-	background: #44DAA9 url('events.png') no-repeat;
+	background: #44DAA9 url('news.png') no-repeat;
 	background-position: center right 10px;
 }
 
@@ -176,28 +216,14 @@ header {
 	background: #44DAA9;
 }
 
-.cards {
+.column .cards {
 	margin-top: 130px;
+	clear: both;
 }
 
 .card {
 	margin: 40px;
 	box-shadow: 0px 5px 5px rgba(0,0,0,0.4);
-}
-
-.card > .header {
-	color: white;
-	font-size: 20px;
-	border-radius: 3px 3px 0 0;
-	background: rgba(44,170,224,0.5);
-	padding: 10px;
-}
-
-.card > .body {
-	border-radius: 0 0 3px 3px;
-	padding: 10px;
-	color: black;
-	background: white;
 }
 
 .card > .header > .source {
@@ -208,51 +234,100 @@ header {
 	content: "- ";
 }
 
-.adweek {background: #000}
-.andreessen-horowitz {background: #E8714C}
-.animal {background: #FEE94A}
-.ars-technica {background: #FD411B}
-.avc {background: #194898}
-.bbc {background: #9C0007}
-.brain-pickings {background: #FFDA45}
-.coding-horror {background: #000}
-.creative-applications {background: #000}
-.fast-company {background: #000}
-.five-thirty-eight {background: #F36E44}
-.gigaom {background: #009DF9}
-.google-analytics-blog {background: #FFBA3C}
-.google-ventures-library {background: #FFBA3C}
-.ideo-labs {background: #98A3A3}
-.journalists-resource {background: #A10114}
-.mit-technology-review {background: #000}
-.mlwave {background: #000}
-.new-york-times {background: #fff}
-.nieman-journalism-lab {background: #C15A6E}
-.official-google-blog {background: #FFBA3C}
-.pandodaily {background: #294955}
-.plausible-thought {background: #45A9CA}
-.quartz {background: #000}
-.subtraction-com {background: #F27540}
-.the-atlantic {background: #fff}
-.the-guardian {background: #004B7F}
-.the-new-yorker {background: #fff}
-.the-next-web {background: #FF3329}
-.the-verge {background: #FD4433}
-.way-out {background: #fff}
-.yahoo-tech {background: #2F124F}
-.platform-thinking {background: #E6411F}
-.the-media-briefing { color:#000; background: #E5F3F6}
-.medium {color:#000; background: #fff}
-.project-syndicate {background: #000}
-.wired {background: #000}
-.vice {background: #000}
-.hacker-news {background: #FF6122}
-.new-statesman {background: #C6022F}
-.nature {background: #A71326}
-.scientific-american {background: #86171B}
-.schneier-on-security {background: #fff}
-.the-economist {background: #E60017}
-.nasa {background: #114090}
-.aeon-magazine {background: #005B6B}
-.time {background: #EC0014}
-.forbes {background: #000}
+.github .card .body {
+	padding: 0px;
+	padding-left: 18px;
+	height: 72px;
+	font-size: 14px;
+	line-height: 25px;
+}
+
+.github .card .bold {
+	padding-top: 10px;
+}
+
+.profile {
+	float: right;
+	width: 72px;
+	height: 72px;
+	border-bottom-right-radius: 3px;
+}
+
+.star, .repoStars {
+	display: inline-block;
+	padding-top: 10px;
+}
+
+.repoStars {
+	position: relative;
+	top: -2px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.description {
+	display: none;
+	position: relative;
+	top: -3px;
+	border-top: 1px solid rgba(0,0,0,0.12);
+	background: white;
+	color: black;
+	padding: 10px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.description.show {
+	display: block;
+}
+
+.adweek {background: rgba(0, 0, 0, 0.7)}
+.andreessen-horowitz {background: rgba(232, 113, 76, 0.7)}
+.animal {background: rgba(254, 233, 74, 0.7)}
+.ars-technica {background: rgba(253, 65, 27, 0.7)}
+.avc {background: rgba(25, 72, 152, 0.7)}
+.bbc {background: rgba(156, 0, 7, 0.7)}
+.brain-pickings {background: rgba(255, 218, 69, 0.7)}
+.coding-horror {background: rgba(0, 0, 0, 0.7)}
+.creative-applications {background: rgba(0, 0, 0, 0.7)}
+.fast-company {background: rgba(0, 0, 0, 0.7)}
+.five-thirty-eight {background: rgba(243, 110, 68, 0.7)}
+.gigaom {background: rgba(0, 157, 249, 0.7)}
+.google-analytics-blog {background: rgba(255, 186, 60, 0.7)}
+.google-ventures-library {background: rgba(255, 186, 60, 0.7)}
+.ideo-labs {background: rgba(152, 163, 163, 0.7)}
+.journalists-resource {background: rgba(161, 1, 20, 0.7)}
+.mit-technology-review {background: rgba(0, 0, 0, 0.7)}
+.mlwave {background: rgba(0, 0, 0, 0.7)}
+.new-york-times {background: rgba(255, 255, 255, 0.7)}
+.nieman-journalism-lab {background: rgba(193, 90, 110, 0.7)}
+.official-google-blog {background: rgba(255, 186, 60, 0.7)}
+.pandodaily {background: rgba(41, 73, 85, 0.7)}
+.plausible-thought {background: rgba(69, 169, 202, 0.7)}
+.quartz {background: rgba(0, 0, 0, 0.7)}
+.subtraction-com {background: rgba(242, 117, 64, 0.7)}
+.the-atlantic {background: rgba(255, 255, 255, 0.7)}
+.the-guardian {background: rgba(0, 75, 127, 0.7)}
+.the-new-yorker {background: rgba(255, 255, 255, 0.7)}
+.the-next-web {background: rgba(255, 51, 41, 0.7)}
+.the-verge {background: rgba(253, 68, 51, 0.7)}
+.way-out {background: rgba(255, 255, 255, 0.7)}
+.yahoo-tech {background: rgba(47, 18, 79, 0.7)}
+.platform-thinking {background: rgba(230, 65, 31, 0.7)}
+.the-media-briefing { color:#000 !important; background: rgba(229, 243, 246, 0.7)}
+.medium {color:#000 !important; background: rgba(255, 255, 255, 0.7)}
+.project-syndicate {background: rgba(0, 0, 0, 0.7)}
+.wired {background: rgba(0, 0, 0, 0.7)}
+.vice {background: rgba(0, 0, 0, 0.7)}
+.hacker-news {background: rgba(255, 97, 34, 0.7)}
+.new-statesman {background: rgba(198, 2, 47, 0.7)}
+.nature {background: rgba(167, 19, 38, 0.7)}
+.scientific-american {background: rgba(134, 23, 27, 0.7)}
+.schneier-on-security {background: rgba(255, 255, 255, 0.7)}
+.the-economist {background: rgba(230, 0, 23, 0.7)}
+.nasa {background: rgba(17, 64, 144, 0.7)}
+.aeon-magazine {background: rgba(0, 91, 107, 0.7)}
+.time {background: rgba(236, 0, 20, 0.7)}
+.forbes {background: rgba(0, 0, 0, 0.7)}
