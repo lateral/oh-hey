@@ -268,7 +268,7 @@ $tw-width: 120px;
 
 .github > .header {
   color: black;
-  background: white url('octocat.png') no-repeat;
+  background: white asset-url('octocat.png') no-repeat;
   background-position: center right 10px;
 }
 
