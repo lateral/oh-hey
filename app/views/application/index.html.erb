@@ -1,6 +1,6 @@
 <div class="container">
     <header class="header">
-        <%= image_tag "logo.png" %>
+        <%= image_tag "logo.png", class: 'icon' %>
         <%= image_tag "ohheylogo.png", class: "logo" %>
     </header>
     <div class="users"></div>
@@ -22,12 +22,12 @@
         <div class="events column">
         	<div class="header">Events</div>
         	<div class="data">@CampusLondon for you</div>
-            <div class="cards"></div>
+          <div class="cards"></div>
         </div>
         <div class="news column">
         	<div class="header">News</div>
         	<div class="data"></div>
-            <div class="cards"></div>
+          <div class="cards"></div>
         </div>
     </section>
 </div>
@@ -38,9 +38,24 @@
 			<div class="source">{{=source}}, {{=date}}</div>
 		</div>
 		<div class="body">
-			{{=summary}}
+			<div class="body-wrapper">{{=summary}}</div>
 		</div>
 	</div>
+</script>
+<script type="text/template" id="event-item">
+  <div class="card" id="{{=id}}">
+    <div class="header">
+      {{=title}}
+    </div>
+    <div class="sub-header">
+      {{=location}}
+      <br/>
+      {{=date}}
+    </div>
+    <div class="body">
+      <div class="body-wrapper">{{=description}}</div>
+    </div>
+  </div>
 </script>
 <script type="text/template" id="github-profile-item">
 	<div class="card">
@@ -78,4 +93,16 @@
 			<div>FOLLOWERS: {{=followers}}</div>
 		</div>
 	</div>
+</script>
+<script type="text/template" id="twitter-mutual-item">
+  <div class="card-half">
+    <div class="top">
+      <div class="name">{{=name}}</div>
+      <img src="{{=photo}}">
+    </div>
+    <div class="bottom">
+      <div class="handle">{{=handle}}</div>
+      <div class="followers">FOLLOWERS: {{=followers}}</div>
+    </div>
+  </div>
 </script>
