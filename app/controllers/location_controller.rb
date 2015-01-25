@@ -6,7 +6,6 @@ class LocationController < ApplicationController
   include ActionView::Helpers::TextHelper
   include ActionView::Helpers::SanitizeHelper
 
-  NEWS_API = LateralRecommender::API.new ENV['API_KEY'], 'news'
   GITHUB = Octokit::Client.new(login: 'ohheyseedhack', password: ENV['GITHUB_PASS'])
 
   def add
@@ -31,7 +30,7 @@ class LocationController < ApplicationController
       data[:mutual_following] = mutual_following(twitter_1, twitter_2)
       data[:news] = mutual_news(twitter_1, twitter_2)
     else
-      data[:news] = news(twitter_1.id)[0..4]
+      data[:news] = news(twitter_1)[0..4]
     end
     render json: data, callback: params['callback']
   end
@@ -47,13 +46,13 @@ class LocationController < ApplicationController
   end
 
   def mutual_news(a, b)
-    news_1 = news(a.id)
-    news_2 = news(b.id)
-    news_1.concat(news_2).uniq { |result| result[:id] }.sort { |a, b| a[:distance].to_f <=> b[:distance].to_f }[0..4]
+    news(a).concat(news(b))
+           .uniq { |result| result[:id] }
+           .sort { |a, b| a[:distance].to_f <=> b[:distance].to_f }[0..4]
   end
 
-  def news(user_id)
-    results = NEWS_API.near_user user_id
+  def news(results)
+    results = results.results_cache
     results.reject! { |item| item['summary'].blank? }[0..5]
     results.map do |result|
       summary = truncate(CGI.unescapeHTML(strip_tags(result['summary'])), length: 150, separator: ' ')

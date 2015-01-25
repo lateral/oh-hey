@@ -4,6 +4,7 @@ class TwitterUser < ActiveRecord::Base
   belongs_to :user
 
   API = LateralRecommender::API.new ENV['API_KEY']
+  NEWS_API = LateralRecommender::API.new ENV['API_KEY'], 'news'
 
   def update
     API.add_user(id)
@@ -18,6 +19,8 @@ class TwitterUser < ActiveRecord::Base
     tweets = meaningful_tweets(users_tweets)
     tweets.each { |tweet| Tweet.create_from_tweet tweet, self }
     save_following
+    self.results_cache = NEWS_API.near_user id
+    save!
   end
 
   def save_following
