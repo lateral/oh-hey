@@ -38,6 +38,10 @@ $(document).ready( function () {
           $(data.users).each(function(k,v) {
             $('.users').append("<div class='user' style='background: url("+v.github_json.photo+"); background-size: 100%;' ></div>");
           });
+        } else {
+          $('.github.column').removeClass('show');
+          $('.twitter.column').removeClass('show');
+          $('.users').empty();
         }
 
         $('.github .cards').empty();
@@ -161,7 +165,9 @@ $(document).ready( function () {
         }
       }
     }).always(function() {
-      setTimeout(function(){getData();}, 2000);
+      setTimeout(function(){ getData(); }, 2000);
+    }).fail(function() {
+      setTimeout(function(){ getData(); }, 2000);
     });
   }
 
