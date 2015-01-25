@@ -44,7 +44,7 @@ class LocationController < ApplicationController
 
   def github_info(data)
     data.map do |item|
-      { id: item[:document_id], title: item[:full_name], description: item[:description],
+      { id: item[:id], title: item[:full_name], description: item[:description],
         language: item[:language], stars: item[:stargazers_count],
         updated: item[:updated_at] }
     end
@@ -57,9 +57,8 @@ class LocationController < ApplicationController
     subs_b = github_info(GITHUB.subscriptions(b.github))
     stats_a = stars_a.concat(subs_a)
     stats_b = stars_b.concat(subs_b)
-    # union =
     stats_a.each_with_object([]) do |repo_a, arr|
-      match = stats_b.detect { |repo_b| repo_b['title'] == repo_a['title'] }
+      match = stats_b.detect { |repo_b| repo_b[:id] == repo_a[:id] }
       arr << match if match
     end
   end
@@ -95,7 +94,7 @@ class LocationController < ApplicationController
 
   def github_self(username)
     user = GITHUB.user(username)
-    { name: user.name, username: user.login, photo: user.avatar_url,
+    { id: id, name: user.name, username: user.login, photo: user.avatar_url,
       joined: user.created_at }
   end
 
@@ -112,7 +111,7 @@ class LocationController < ApplicationController
   def check_twitter
     return unless params[:twitter]
     return if @user.twitter && @user.twitter == params[:twitter]
-    @user.twitter_json = twitter_self(params[:twitter])
+    # @user.twitter_json = twitter_self(params[:twitter])
     @user.twitter = params[:twitter]
     @user.save
   end
