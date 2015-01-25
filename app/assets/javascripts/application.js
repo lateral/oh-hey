@@ -121,6 +121,9 @@ $(document).ready( function () {
           } else {
             $('.twitter .more').removeClass('show');
           }
+        } else {
+          $('.github.column').removeClass('show');
+          $('.twitter.column').removeClass('show');
         }
 
         if (data.news && data.news.length > 0) {
