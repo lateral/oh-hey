@@ -25,6 +25,7 @@ $(document).ready( function () {
 	var newsTemplate = _.template($("#news-item").html());
 	var githubProfileTemplate = _.template($("#github-profile-item").html());
 	var githubMutualTemplate = _.template($("#github-mutual-item").html());
+	var twitterProfileTemplate = _.template($("#twitter-profile-item").html());
 
 	function getData() {
 		$.getJSON("http://oh-hey.elasticbeanstalk.com/data.json?callback=?", function ( data ) {
@@ -38,14 +39,16 @@ $(document).ready( function () {
 				}
 
 				$('.github .cards').empty();
+				$('.twitter .cards').empty();
 				
 				if (data.users && data.users.length > 0) {
-					var profileFound = false;
+					var githubProfileFound = false;
+					var twitterProfileFound = false;
 
 
 					$(data.users).each(function (k,v) {
 						if (v.github_json) {
-							profileFound = true;
+							githubProfileFound = true;
 
 
 							var el = githubProfileTemplate({ 
@@ -56,12 +59,31 @@ $(document).ready( function () {
 							});
 							$(".github > .cards").append(el);
 						}
+
+						if (v.twitter_json) {
+							twitterProfileFound = true;
+
+							var el = twitterProfileTemplate({ 
+								name: v.twitter_json.name,
+								photo: v.twitter_json.photo,
+								handle: v.twitter_json.username,
+								followers: v.twitter_json.followers,
+								//bio: v.twitter_json.description
+							});
+							$(".twitter > .cards").append(el);
+						}
 					});
 
-					if (profileFound) {
+					if (githubProfileFound) {
 						$('.github.column').addClass('show');
 					} else {
 						$('.github.column').removeClass('show');
+					}
+
+					if (twitterProfileFound) {
+						$('.twitter.column').addClass('show');
+					} else {
+						$('.twitter.column').removeClass('show');
 					}
 
 					$(".github .more > .cards").empty();

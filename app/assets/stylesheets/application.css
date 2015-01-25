@@ -164,7 +164,7 @@ header {
 }
 
 .twitter .card > .header {
-
+	background: rgba(85, 172, 238, 0.7)
 }
 
 .github {
@@ -234,7 +234,7 @@ header {
 	content: "- ";
 }
 
-.github .card .body {
+.github .card .body, .twitter .card .body {
 	padding: 0px;
 	padding-left: 18px;
 	height: 72px;
@@ -281,6 +281,25 @@ header {
 
 .description.show {
 	display: block;
+}
+
+.twitter .card > .body  > .subody{
+	border-top:1px solid #e3dcd7;
+	line-height:20px;
+	height:85px;
+}
+
+.twitter .card > .body  > .subody > .info{
+padding:20px;
+float:left;
+}
+
+.twitter .card > .body  > .subodyI{
+	border-top:1px solid #e3dcd7;
+	padding: 10px;
+	padding-left:20px;
+	line-height:26px;
+	height:26px;
 }
 
 .adweek {background: rgba(0, 0, 0, 0.7)}
